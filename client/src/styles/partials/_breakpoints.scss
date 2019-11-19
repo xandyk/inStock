@@ -1,0 +1,21 @@
+/* media query for mobile */
+// @mixin small {
+//   @media only screen and (max-width: 767px) {
+//     @content;
+//   }
+// }
+
+/* media query for tablet */
+@mixin medium {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+
+/* media query for high pixel density desktops */
+@mixin large {
+  @media only screen and (min-width: 1440px) {
+    @content;
+  }
+}

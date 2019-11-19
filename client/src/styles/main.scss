@@ -1,0 +1,25 @@
+@import "./partials/breakpoints";
+@import "./partials/colors";
+@import "./partials/fonts";
+@import "./partials/header";
+
+
+html,
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.8rem;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+
+
+
