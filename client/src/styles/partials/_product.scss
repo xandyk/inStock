@@ -1,0 +1,53 @@
+.product{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+
+
+&__top-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+&__mid-container{
+    display: flex;
+    flex-direction: column;
+}
+
+&__data-container{
+    display: flex;
+    flex-direction: column;
+}
+
+&__label{
+    margin-bottom: 16px;
+}
+
+&__data{
+    margin-bottom: 24px;
+}
+
+&__header{
+    color: $black;
+    margin-bottom: 16px;
+}
+
+&__name{
+    margin-bottom: 16px;
+}
+
+}
+
+@include large{
+    .product
+        &__mid-container{
+            flex-direction: row;
+        }
+
+        &__header{
+            color: blue;
+        }
+}
