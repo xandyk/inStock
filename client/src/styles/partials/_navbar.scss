@@ -1,22 +1,54 @@
 .nav {
-
+    position: relative;
     background-color: $black;
-    height: 15vh;
+    height: 43vh;
     width: 100vw;
 
-    &__wrapper {
-
+    &__logo {
+        margin: 16px 0 15px 30vw;
     }
 
-
-    &__logo {
-        margin: 0 auto;
-
     &__menu {
+        margin: unset;
+        padding-left: unset;
+        list-style: none;
         display: flex;
     }
 
+    &__list-inventory {
+        width: 50%;
+        text-align: center;
+        border-bottom: 4px solid $white;
     }
-}
+
+    &__list-locations {
+        width: 50%;
+        text-align: center;
+    }
+
+    &__list-inventory.active {
+        border-bottom: none;
+        text-decoration: none;
+        color: $white;
+        }
+
+    &__list-locations.inactive {
+            text-decoration: none;
+            color: $silver;
+            width: 50%;
+            padding-bottom: 5px;
+            }
+
+
+
+    }
+
+
+  
+
+
+
+      
+
 
 

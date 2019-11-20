@@ -17,19 +17,47 @@
 }
 
 .nav {
+  position: relative;
   background-color: #323232;
-  height: 15vh;
+  height: 43vh;
   width: 100vw;
 }
 
 .nav__logo {
-  margin: 0 auto;
+  margin: 16px 0 15px 30vw;
 }
 
-.nav__logo__menu {
+.nav__menu {
+  margin: unset;
+  padding-left: unset;
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.nav__list-inventory {
+  width: 50%;
+  text-align: center;
+  border-bottom: 4px solid #FFFFFF;
+}
+
+.nav__list-locations {
+  width: 50%;
+  text-align: center;
+}
+
+.nav__list-inventory.active {
+  border-bottom: none;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.nav__list-locations.inactive {
+  text-decoration: none;
+  color: #AFAFAF;
+  width: 50%;
+  padding-bottom: 5px;
 }
 
 html,
