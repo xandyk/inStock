@@ -2,18 +2,34 @@
 /* media query for tablet */
 /* media query for high pixel density desktops */
 @font-face {
-  src: url("../assets/fonts/AvenirNextRegular.otf");
-  font-family: "AvenirNextRegular";
+  font-family: 'AvenirNextRegular';
+  src: url(../assets/fonts/AvenirNextProLT/Linotype-AvenirNextLTPro-Regular.otf);
 }
 
 @font-face {
-  src: url("../assets/fonts/AvenirNextDemi.otf");
-  font-family: "AvenirNextDemiBold";
+  font-family: 'AvenirNextMedium';
+  src: url(../assets/fonts/AvenirNextProLT/Linotype-AvenirNextLTPro-Medium.otf);
 }
 
 @font-face {
-  src: url("../assets/fonts/AvenirNextBold.otf");
-  font-family: "AvenirNextBold";
+  font-family: 'AvenirNextBold';
+  src: url(../assets/fonts/AvenirNextProLT/Linotype-AvenirNextLTPro-Bold.otf);
+}
+
+.nav {
+  background-color: #323232;
+  height: 15vh;
+  width: 100vw;
+}
+
+.nav__logo {
+  margin: 0 auto;
+}
+
+.nav__logo__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .location {
