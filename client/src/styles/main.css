@@ -32,7 +32,7 @@
   display: flex;
 }
 
-.location {
+.location__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,12 +40,13 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e1e1e1;
+  width: 288px;
 }
 
-.location__row {
+.location__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,7 +54,285 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 288px;
+  width: 234px;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "AvenirNextRegular";
+}
+
+.location__warehouse {
+  margin-bottom: 24px;
+}
+
+.location__name {
+  font-family: "AvenirNextMedium";
+  font-size: 14px;
+  line-height: 14px;
+  margin-bottom: 12px;
+}
+
+.location__address {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+}
+
+.location__contact {
+  margin-bottom: 24px;
+}
+
+.location__contact-name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.location__contact-role {
+  font-weight: 500;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.location__contactinfo {
+  margin-bottom: 24px;
+}
+
+.location__contactinfo-phone {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.location__contactinfo-email {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.location__categories-text {
+  font-weight: 500;
+}
+
+.location__image-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 54px;
+}
+
+@media only screen and (min-width: 768px) {
+  .location__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-top: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e1e1e1;
+    width: 720px;
+  }
+  .location__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 704px;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: "AvenirNextRegular";
+  }
+  .location__warehouse {
+    width: 200px;
+    margin-bottom: 32px;
+  }
+  .location__name {
+    font-family: "AvenirNextMedium";
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 12px;
+    font-size: 15.9px;
+    line-height: 24px;
+  }
+  .location__address {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .location__subcontainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .location__contact {
+    margin-bottom: 0;
+    width: 248px;
+  }
+  .location__contact-name {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .location__contact-role {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .location__contactinfo {
+    margin-bottom: 0;
+    width: 248px;
+  }
+  .location__contactinfo-phone {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .location__contactinfo-email {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .location__categories {
+    width: 208px;
+  }
+  .location__categories-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .location__line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .location__image-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 54px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .location__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-top: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e1e1e1;
+    width: 1080px;
+  }
+  .location__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 1064px;
+    padding-left: 8px;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: "AvenirNextRegular";
+  }
+  .location__warehouse {
+    width: 276px;
+    margin-bottom: 0;
+  }
+  .location__name {
+    font-family: "AvenirNextMedium";
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .location__address {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .location__subcontainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .location__contact {
+    margin-bottom: 0;
+    width: 276px;
+  }
+  .location__contact-name {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .location__contact-role {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .location__contactinfo {
+    margin-bottom: 0;
+    width: 276px;
+  }
+  .location__contactinfo-phone {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .location__contactinfo-email {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .location__categories {
+    width: 216px;
+  }
+  .location__categories-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .location__line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .location__image-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 16px;
+    padding-right: 24px;
+  }
 }
 
 html,
@@ -71,5 +350,9 @@ body {
 *:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
 }
 /*# sourceMappingURL=main.css.map */
