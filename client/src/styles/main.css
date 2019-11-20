@@ -1,6 +1,37 @@
 /* media query for mobile */
 /* media query for tablet */
 /* media query for high pixel density desktops */
+@font-face {
+  font-family: 'AvenirNextRegular';
+  src: url(../assets/fonts/AvenirNextProLT/Linotype-AvenirNextLTPro-Regular.otf);
+}
+
+@font-face {
+  font-family: 'AvenirNextMedium';
+  src: url(../assets/fonts/AvenirNextProLT/Linotype-AvenirNextLTPro-Medium.otf);
+}
+
+@font-face {
+  font-family: 'AvenirNextBold';
+  src: url(../assets/fonts/AvenirNextProLT/Linotype-AvenirNextLTPro-Bold.otf);
+}
+
+.nav {
+  background-color: #323232;
+  height: 15vh;
+  width: 100vw;
+}
+
+.nav__logo {
+  margin: 0 auto;
+}
+
+.nav__logo__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .product {
   display: -webkit-box;
   display: -ms-flexbox;

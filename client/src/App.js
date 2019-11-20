@@ -14,4 +14,18 @@ function App() {
   );
 }
 
-export default App;
+
+export default class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <Navbar />
+          <Route path="/inventory" component={Inventory} />
+          <Route path="/locations" component={Locations} />
+        </div>
+      </BrowserRouter>
+    );
+  }
+} 
+
