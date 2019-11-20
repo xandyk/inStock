@@ -1,27 +1,23 @@
 import React from 'react'
-import{ Link, withRouter} from 'react-router-dom'
+import{ Link } from 'react-router-dom'
 import logo from '../../assets/logo/instock.svg';
 
- const Navbar = (props) => {
+
+ const Navbar = () => {
   
   return (
-    <nav className="nav-wrapper red darken-3">
-      <div className="container">
-        <a className="brand-logo">
-          <img src={logo} alt="logo"/>
-        </a>
-        <ul className="right">
-  
+    <div className="nav-container">
+      <img className="nav-logo" src={logo} alt="logo"/>
+      <ul>
           <li>
-            <Link to="/inventory">Inventory</Link>
+            <Link to="/inventory"></Link>
           </li>
           <li>
-            <Link to="/locations">Locations</Link>
+            <Link to="/locations"></Link>
           </li>
         </ul>
-      </div>
-    </nav>
+    </div>
   );
 }
 
-export default withRouter(Navbar)
+export default Navbar

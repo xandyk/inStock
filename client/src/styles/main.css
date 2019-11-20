@@ -1,3 +1,12 @@
+/* media query for mobile */
+/* media query for tablet */
+/* media query for high pixel density desktops */
+.nav-container {
+  background-color: #323232;
+  height: 30vh;
+  width: 100vw;
+}
+
 html,
 body {
   margin: 0;
