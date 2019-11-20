@@ -1,3 +1,45 @@
+/* media query for mobile */
+/* media query for tablet */
+/* media query for high pixel density desktops */
+@font-face {
+  src: url("../assets/fonts/AvenirNextRegular.otf");
+  font-family: "AvenirNextRegular";
+}
+
+@font-face {
+  src: url("../assets/fonts/AvenirNextDemi.otf");
+  font-family: "AvenirNextDemiBold";
+}
+
+@font-face {
+  src: url("../assets/fonts/AvenirNextBold.otf");
+  font-family: "AvenirNextBold";
+}
+
+.location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.location__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 288px;
+}
+
 html,
 body {
   margin: 0;

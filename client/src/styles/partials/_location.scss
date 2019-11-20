@@ -1,0 +1,23 @@
+.location {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &__row{
+        display: flex;
+        flex-direction: column;
+        width:288px;
+    }
+}
+
+// @include medium {
+//     .location {
+
+//     }
+// }
+
+// @include large {
+//     .location {
+        
+//     }
+// }

@@ -1,0 +1,60 @@
+@mixin desk__hero-header {
+    font-family: "AvenirNextBold";
+    font-size: 60px;
+    line-height: 68px;
+}
+
+@mixin desk__h1 {
+    font-size: 36px;
+    line-height: 44px;
+}
+
+@mixin desk__h2 {
+    font-family: "AvenirNextBold";
+    font-size: 24px;
+    line-height: 32px;
+}
+
+@mixin desk__h3 {
+    font-size: 15.9px;
+    line-height: 24px;
+}
+
+@mixin desk__h4-paragraph {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+@mixin desk__h4-lists-contact {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@mixin desk__h5 {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+@mixin mob__h2 {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+@mixin mob__h4-paragraph {
+    font-family: "AvenirNextRegular";
+    font-size: 13px;
+    line-height: 18px;
+}
+
+@mixin mob__h5 {
+    font-size: 12px;
+    line-height: 18px;
+    font-family: "AvenirNextRegular";
+    color: $silver;
+}
+
+@mixin mob__h1 {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "AvenirNextBold";
+}
