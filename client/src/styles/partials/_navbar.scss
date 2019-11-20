@@ -1,10 +1,22 @@
-.nav-container {
-    // margin: 0 3.125vw;
-    // display: flex;
-    // flex-direction: column;
+.nav {
+
     background-color: $black;
-    height: 30vh;
+    height: 15vh;
     width: 100vw;
+
+    &__wrapper {
+
+    }
+
+
+    &__logo {
+        margin: 0 auto;
+
+    &__menu {
+        display: flex;
+    }
+
+    }
 }
 
 

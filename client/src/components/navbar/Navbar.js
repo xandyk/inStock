@@ -6,16 +6,18 @@ import logo from '../../assets/logo/instock.svg';
  const Navbar = () => {
   
   return (
-    <div className="nav-container">
-      <img className="nav-logo" src={logo} alt="logo"/>
-      <ul>
-          <li>
-            <Link to="/inventory"></Link>
+    <div className="nav">
+      <img className="nav__logo" src={logo} alt="logo"/>
+      <nav className="nav__wrapper">
+        <ul className="nav__menu">
+          <li className="nav__list-inventory">
+            <Link className="nav__list-inventory active" to="/inventory"></Link>
           </li>
-          <li>
-            <Link to="/locations"></Link>
+          <li className="nav__list-locations">
+            <Link className="nav__list-locations inactive" to="/locations"></Link>
           </li>
         </ul>
+      </nav>
     </div>
   );
 }
