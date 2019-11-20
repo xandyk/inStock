@@ -1,7 +1,8 @@
 @import "./partials/breakpoints";
 @import "./partials/colors";
 @import "./partials/fonts";
-@import "./partials/header";
+@import "./partials/navbar";
+
 
 
 html,
@@ -18,8 +19,4 @@ body {
 *:after {
   box-sizing: inherit;
 }
-
-
-
-
 
