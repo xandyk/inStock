@@ -11,7 +11,7 @@
         "categories": [
             "Industrial",
             "Automotive",
-            "Heavy",
+            "Heavy",2
             "Mechanical",
             "Engineering",
             "Transportation",
@@ -76,6 +76,8 @@
         ]
     },
     {
+    "warehoueId":"32bbed84-d450-47a6-a2f1-0648ff9c01d1",
+    "products":[{
         "id": "31fd6459-96a4-4536-9c92-443e7fc5d8a2",
         "name": "Product Name Here",
         "descriptionBrief": "Here is a very brief description of the product...",
@@ -93,7 +95,7 @@
             "Transportation",
             "Sales"
         ]
-    },
+    }]},
     {
         "id": "9862a23d-892b-45eb-987a-7c253793a9f5",
         "name": "Product Name Here",

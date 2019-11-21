@@ -3,7 +3,9 @@ import Navbar from './components/navbar/Navbar';
 import Inventory from './components/navbar/Inventory';
 import Locations from './components/navbar/Locations';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Location from './components/table/Location';
+import NewInventory from './components/forms/NewInventory';
+
+import Location from './components/tables/Location';
 
 const locationList = [
   {

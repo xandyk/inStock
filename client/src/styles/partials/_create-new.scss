@@ -1,0 +1,24 @@
+
+
+
+
+
+
+
+
+
+
+
+/* ----- Media Queries: Tablet ----- */
+@include medium {
+
+
+.form__container {
+        display: grid;
+        grid-template-columns: 15.278vw 15.278vw;
+        grid-template-rows: 48px, 48px, 48px;
+        grid-gap: 1.5rem;
+    
+    }
+
+}
