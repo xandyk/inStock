@@ -11,11 +11,11 @@ export default function Product(props) {
         </form>
       </div>
       <div className="product__mid-container">
-        <div>
+        <div className="product__label-container">
           <h5 className="product__label">ITEM</h5>
           <h3 className="product__name">Product Name Here</h3>
           <h4 className="product__data">
-            Here is a very brief description of the product...
+            Here is a very brief description of the product in the inventory...
           </h4>
         </div>
         <div className="product__data-container">

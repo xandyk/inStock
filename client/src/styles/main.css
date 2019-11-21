@@ -1,5 +1,6 @@
 /* media query for mobile */
 /* media query for tablet */
+/* media query for landscape, medium pixel density desktops */
 /* media query for high pixel density desktops */
 @font-face {
   font-family: 'AvenirNextRegular';
@@ -94,6 +95,7 @@
   line-height: 20px;
   font-family: AvenirNextRegular;
   color: #AFAFAF;
+  color: #AFAFAF;
 }
 
 .product__data {
@@ -140,16 +142,37 @@
   border-radius: 50%;
 }
 
-@media only screen and (min-width: 1440px) {
-  .product
-__mid-container {
+@media only screen and (min-width: 768px) {
+  .product__top-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .product__mid-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  __header {
-    color: blue;
+  .product__data-container {
+    margin-right: 3%;
+  }
+  .product__label-container {
+    margin-right: 3%;
+  }
+  .product {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .product__name {
+    margin: 0;
+  }
+  .product__data {
+    margin: 0;
   }
 }
 

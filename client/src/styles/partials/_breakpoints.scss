@@ -1,9 +1,9 @@
 /* media query for mobile */
-// @mixin small {
-//   @media only screen and (max-width: 767px) {
-//     @content;
-//   }
-// }
+@mixin small {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
 
 /* media query for tablet */
 @mixin medium {
@@ -12,9 +12,15 @@
   }
 }
 
+/* media query for landscape, medium pixel density desktops */
+@mixin large {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
 
 /* media query for high pixel density desktops */
-@mixin large {
+@mixin huge {
   @media only screen and (min-width: 1440px) {
     @content;
   }

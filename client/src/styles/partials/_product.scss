@@ -59,6 +59,7 @@
 &__label{
     margin-bottom: 16px;
     @include label
+    color: $silver;
 }
 
 &__data{
@@ -93,16 +94,31 @@
     width: 60px;
     border-radius: 50%;
 }
-
 }
 
-@include large{
-    .product
-        &__mid-container{
-            flex-direction: row;
-        }
+@include medium{
+    .product__top-container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .product__mid-container{
+        flex-direction: row;
+    }
 
-        &__header{
-            color: blue;
-        }
+    .product__data-container{
+        margin-right: 3%;
+    }
+    .product__label-container{
+        margin-right: 3%;
+    }
+    .product{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .product__name{
+        margin: 0;
+    }
+    .product__data{
+        margin: 0;
+    }
 }
