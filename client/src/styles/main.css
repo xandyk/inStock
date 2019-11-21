@@ -280,11 +280,16 @@
   width: 54px;
 }
 
+.location:focus {
+  border: 2px solid #0095FF;
+  outline: none;
+}
+
 @media only screen and (min-width: 768px) {
   .location {
     padding: 48px 3.125vw 0 3.125vw;
   }
-  .location__title-box {
+  .location__heading {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -300,16 +305,64 @@
             justify-content: space-between;
     width: 720px;
   }
+  .location__title-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
   .location__title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-item-align: start;
-        align-self: flex-start;
     font-size: 24px;
     line-height: 24px;
     font-family: "AvenirNextBold";
     margin-bottom: 0;
+  }
+  .location__search-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+  .location__search-icon {
+    position: absolute;
+    color: #323232;
+    top: 15px;
+    left: 12px;
+  }
+  .location__search-input {
+    font-family: "AvenirNextRegular";
+    font-size: 13px;
+    line-height: 18px;
+    height: 49px;
+    width: 288px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    background-color: #FAFAFA;
+    margin-bottom: 0;
+    text-indent: 36px;
+    color: #323232;
+  }
+  .location__search-input::-webkit-input-placeholder {
+    color: #323232;
+  }
+  .location__search-input:-ms-input-placeholder {
+    color: #323232;
+  }
+  .location__search-input::-ms-input-placeholder {
+    color: #323232;
+  }
+  .location__search-input::placeholder {
+    color: #323232;
+  }
+  .location__search-input:focus {
+    border: 2px solid #0095FF;
+    outline: none;
   }
   .location__row {
     display: -webkit-box;
@@ -338,7 +391,6 @@
     font-family: "AvenirNextRegular";
   }
   .location__warehouse {
-    width: 200px;
     margin-bottom: 32px;
   }
   .location__name {
@@ -420,6 +472,22 @@
     display: -ms-flexbox;
     display: flex;
   }
+  .location__heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 1080px;
+  }
   .location__title {
     font-family: "AvenirNextBold";
     font-size: 36px;
@@ -454,6 +522,7 @@
   }
   .location__warehouse {
     width: 276px;
+    padding-right: 24px;
     margin-bottom: 0;
   }
   .location__name {

@@ -126,29 +126,73 @@
         align-items: flex-start;
         width: 54px;
     }
+    
+    &:focus {
+            border: 2px solid $brainflix-blue;
+            outline: none;
+        }
 }
 
 @include medium {
     .location {
         padding: 48px 3.125vw 0 3.125vw;
 
+        &__heading {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+            width: 720px;
+        }
+
         &__title-box{
-                display: flex;
-                flex-direction: row;
-                align-items: baseline;
-                justify-content: space-between;
-                width: 720px;
-            }
+            display: flex;
+            flex-direction: row;
+        }
 
         &__title {
             display: flex;
-            align-self: flex-start;
+            // align-self: flex-start;
             // flex-direction: row;
             // justify-self: flex-start;
             font-size: 24px;
             line-height: 24px;
             font-family: "AvenirNextBold";
             margin-bottom: 0;
+
+        }
+
+        &__search-container {
+            display: flex;
+            position: relative;
+        }
+
+        &__search-icon {
+            position: absolute;
+            color: $black;
+            top: 15px;
+            left: 12px;
+        }
+
+        &__search-input {
+            @include mob__h4-paragraph;
+            height: 49px;
+            width: 288px;
+            border: 1px solid $mercury;
+            border-radius: 4px;
+            background-color: $alabaster;
+            margin-bottom: 0;
+            text-indent: 36px;
+            color: $black;
+
+            &::placeholder {
+                color: $black;
+            }
+
+            &:focus {
+                border: 2px solid $brainflix-blue;
+                outline: none;
+            }
 
         }
 
@@ -171,7 +215,6 @@
         }
 
         &__warehouse {
-            width: 200px;
             margin-bottom: 32px;
         }
 
@@ -242,6 +285,15 @@
 @include large {
     .location {
         display: flex;
+
+        &__heading {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+            width: 1080px;
+        }
+
         &__title{
             font-family: "AvenirNextBold";
             font-size: 36px;
@@ -268,6 +320,7 @@
 
         &__warehouse {
             width: 276px;
+            padding-right: 24px;
             margin-bottom: 0;
         }
 

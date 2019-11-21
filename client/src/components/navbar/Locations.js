@@ -11,8 +11,10 @@ export default function Locations(props) {
     })
     return (
         <div className="location">
-            <div className="location__title-box">
-                <h1 className="location__title">Locations</h1>
+            <div className="location__heading">
+                <div className="location__title-box">
+                    <h1 className="location__title">Locations</h1>
+                </div>
                 <div className="location__search-container">
 
                     <img className="location__search-icon" src={search} alt="Search Icon"></img>
