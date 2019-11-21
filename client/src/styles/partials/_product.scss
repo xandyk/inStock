@@ -1,9 +1,43 @@
+@mixin header {
+  color: $black;
+  font-family: AvenirNextBold;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@mixin subheader {
+  color: $black;
+  font-family: AvenirNextMedium;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@mixin paragraph {
+  color: $black;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: AvenirNextRegular;
+}
+
+@mixin label {
+  font-size: 12px;
+  line-height: 20px;
+  font-family: AvenirNextRegular;
+  color: $silver;
+}
+
 .product{
     display: flex;
     flex-direction: column;
     margin-left: 5%;
     margin-right: 5%;
+    border-bottom-style: solid;
+    border-color: silver;
 
+&__bottom-container{
+    display: flex;
+    flex-direction: row;
+}
 
 &__top-container{
     display: flex;
@@ -24,19 +58,40 @@
 
 &__label{
     margin-bottom: 16px;
+    @include label
 }
 
 &__data{
     margin-bottom: 24px;
+    @include paragraph
 }
 
 &__header{
+    @include header;
     color: $black;
     margin-bottom: 16px;
 }
 
 &__name{
     margin-bottom: 16px;
+    @include subheader;
+}
+
+&__input{
+    border-radius: 4px;
+    height: 40px;
+    width: 252px;
+    background-image: url("../assets/icons/search.svg");
+    background-repeat: no-repeat;
+    background-position: 5%;
+}
+
+&__button{
+    display: flex;
+    background-color: $instock-blue-dark;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
 }
 
 }

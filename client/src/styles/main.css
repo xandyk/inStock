@@ -42,6 +42,18 @@
           flex-direction: column;
   margin-left: 5%;
   margin-right: 5%;
+  border-bottom-style: solid;
+  border-color: silver;
+}
+
+.product__bottom-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .product__top-container {
@@ -78,19 +90,54 @@
 
 .product__label {
   margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 20px;
+  font-family: AvenirNextRegular;
+  color: #AFAFAF;
 }
 
 .product__data {
   margin-bottom: 24px;
+  color: #323232;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: AvenirNextRegular;
 }
 
 .product__header {
+  color: #323232;
+  font-family: AvenirNextBold;
+  font-size: 24px;
+  line-height: 32px;
   color: #323232;
   margin-bottom: 16px;
 }
 
 .product__name {
   margin-bottom: 16px;
+  color: #323232;
+  font-family: AvenirNextMedium;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.product__input {
+  border-radius: 4px;
+  height: 40px;
+  width: 252px;
+  background-image: url("../assets/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: 5%;
+}
+
+.product__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #002F5F;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
 }
 
 @media only screen and (min-width: 1440px) {
