@@ -1,11 +1,11 @@
 .nav {
     position: relative;
     background-color: $black;
-    height: 43vh;
+    height: 80px;
     width: 100vw;
 
     &__logo {
-        margin: 16px 0 15px 30vw;
+        margin: 16px 0 0 30vw;
     }
 
     &__menu {
@@ -13,10 +13,12 @@
         padding-left: unset;
         list-style: none;
         display: flex;
+      
     }
 
     &__list-inventory {
         width: 50%;
+        padding-bottom: 5px;
         text-align: center;
         border-bottom: 4px solid $white;
     }
@@ -30,18 +32,63 @@
         border-bottom: none;
         text-decoration: none;
         color: $white;
-        }
+    }
 
     &__list-locations.inactive {
             text-decoration: none;
             color: $silver;
             width: 50%;
             padding-bottom: 5px;
-            }
-
-
-
     }
+}
+
+
+
+/* ----- Media Queries: Tablet ----- */
+
+@include medium  {
+
+.nav {
+    height: 80px;
+    display: flex;
+    flex-direction: flow;
+    align-items: center;
+
+    &__logo{
+        margin-top: unset;
+        margin-left: 3.125vw;
+        margin-right: 56px;
+      }
+      
+      &__menu {
+          display: flex;
+          align-items: center;
+      }
+
+    &__list-inventory {
+        border-bottom: none;
+        padding: unset;
+        width: 12vw;
+    }
+
+    &__list-inventory.active { 
+        border-bottom: 4px solid $white;
+        padding: 27.5px;
+    }
+
+    &__list-locations.inactive {
+        margin-left: 30px;
+        padding: 28px;
+    }
+}
+}
+
+
+@include large {
+    .nav__logo {
+        margin-left: 180px;
+    }
+}
 
 
   

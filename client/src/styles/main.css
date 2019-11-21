@@ -19,12 +19,12 @@
 .nav {
   position: relative;
   background-color: #323232;
-  height: 43vh;
+  height: 80px;
   width: 100vw;
 }
 
 .nav__logo {
-  margin: 16px 0 15px 30vw;
+  margin: 16px 0 0 30vw;
 }
 
 .nav__menu {
@@ -38,6 +38,7 @@
 
 .nav__list-inventory {
   width: 50%;
+  padding-bottom: 5px;
   text-align: center;
   border-bottom: 4px solid #FFFFFF;
 }
@@ -58,6 +59,55 @@
   color: #AFAFAF;
   width: 50%;
   padding-bottom: 5px;
+}
+
+/* ----- Media Queries: Tablet ----- */
+@media only screen and (min-width: 768px) {
+  .nav {
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: flow;
+            flex-direction: flow;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav__logo {
+    margin-top: unset;
+    margin-left: 3.125vw;
+    margin-right: 56px;
+  }
+  .nav__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav__list-inventory {
+    border-bottom: none;
+    padding: unset;
+    width: 12vw;
+  }
+  .nav__list-inventory.active {
+    border-bottom: 4px solid #FFFFFF;
+    padding: 27.5px;
+  }
+  .nav__list-locations.inactive {
+    margin-left: 30px;
+    padding: 28px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .nav__logo {
+    margin-left: 180px;
+  }
 }
 
 html,
