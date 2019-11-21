@@ -1,5 +1,5 @@
 import React from 'react'
-import Location from '../table/Location'
+import Location from '../tables/Location'
 import search from '../../assets/icons/search.svg'
 
 
