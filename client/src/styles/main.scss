@@ -1,9 +1,11 @@
 @import "./partials/breakpoints";
 @import "./partials/colors";
 @import "./partials/fonts";
+@import "./partials/typography";
 @import "./partials/navbar";
 @import "./partials/product";
 
+@import "./partials/location";
 
 
 html,
@@ -11,6 +13,7 @@ body {
   margin: 0;
   font-family: "Nunito", sans-serif;
   line-height: 1.8rem;
+  
   height: 100vh;
   box-sizing: border-box;
 }
@@ -19,5 +22,9 @@ body {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, p {
+    margin: 0;
 }
 
