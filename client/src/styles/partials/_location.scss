@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 32px 5vw 0 5vw;
     // width: 288px;
     // flex-direction: row;
     // justify-content: center;
@@ -13,9 +14,43 @@
         // flex-direction: row;
         // justify-self: flex-start;
         font-size: 24px;
-        line-height: 32px;
+        line-height: 24px;
         font-family: "AvenirNextBold";
-        
+        margin-bottom: 16px;
+    }
+
+    &__search-container {
+        display: flex;
+        position: relative;
+    }
+
+    &__search-icon {
+        position: absolute;
+        color: $black;
+        top: 15px;
+        left: 12px;
+    }
+
+    &__search-input {
+        @include mob__h4-paragraph;
+        height: 49px;
+        width: 288px;
+        border: 1px solid $mercury;
+        border-radius: 4px;
+        background-color: $alabaster;
+        margin-bottom: 8px;
+        text-indent: 36px;
+        color: $black;
+
+        &::placeholder {
+            color: $black;
+        }
+
+        &:focus {
+            border: 2px solid $brainflix-blue;
+            outline: none;
+        }
+
     }
 
     &__row{
@@ -95,6 +130,28 @@
 
 @include medium {
     .location {
+        padding: 48px 3.125vw 0 3.125vw;
+
+        &__title-box{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+        &__title {
+            display: flex;
+            align-self: flex-start;
+            // flex-direction: row;
+            // justify-self: flex-start;
+            font-size: 24px;
+            line-height: 24px;
+            font-family: "AvenirNextBold";
+            margin-bottom: 0;
+
+        }
+
+
         &__row{
             display: flex;
             flex-direction: row;

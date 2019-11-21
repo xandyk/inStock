@@ -173,7 +173,21 @@ const locationList = [
 export default function App() {
   return (
     <div className="App">
-      <Locations locationList={locationList} />
+      <BrowserRouter>
+        <div className="App">
+          <Navbar />
+          <Route path="/inventory" component={Inventory} />
+          {/* <Route path="/locations" component={Locations} /> */}
+          <Route
+            path="/locations"
+            render={props =>
+              <>
+                <Locations locationList={locationList} />
+              </>
+            }
+          />
+        </div>
+      </BrowserRouter>
     </div>
   );
 }

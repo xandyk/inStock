@@ -36,7 +36,80 @@
   display: flex;
 }
 
-<<<<<<< HEAD
+.nav__list-inventory {
+  width: 50%;
+  padding-bottom: 5px;
+  text-align: center;
+  border-bottom: 4px solid #FFFFFF;
+}
+
+.nav__list-locations {
+  width: 50%;
+  text-align: center;
+}
+
+.nav__list-inventory.active {
+  border-bottom: none;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.nav__list-locations.inactive {
+  text-decoration: none;
+  color: #AFAFAF;
+  width: 50%;
+  padding-bottom: 5px;
+}
+
+/* ----- Media Queries: Tablet ----- */
+@media only screen and (min-width: 768px) {
+  .nav {
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: flow;
+            flex-direction: flow;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav__logo {
+    margin-top: unset;
+    margin-left: 3.125vw;
+    margin-right: 56px;
+  }
+  .nav__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav__list-inventory {
+    border-bottom: none;
+    padding: unset;
+    width: 12vw;
+  }
+  .nav__list-inventory.active {
+    border-bottom: 4px solid #FFFFFF;
+    padding: 27.5px;
+  }
+  .nav__list-locations.inactive {
+    margin-left: 30px;
+    padding: 28px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .nav__logo {
+    margin-left: 180px;
+  }
+}
+
 .location {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,6 +121,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 32px 5vw 0 5vw;
 }
 
 .location__title {
@@ -57,8 +131,58 @@
   -ms-flex-item-align: start;
       align-self: flex-start;
   font-size: 24px;
-  line-height: 32px;
+  line-height: 24px;
   font-family: "AvenirNextBold";
+  margin-bottom: 16px;
+}
+
+.location__search-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.location__search-icon {
+  position: absolute;
+  color: #323232;
+  top: 15px;
+  left: 12px;
+}
+
+.location__search-input {
+  font-family: "AvenirNextRegular";
+  font-size: 13px;
+  line-height: 18px;
+  height: 49px;
+  width: 288px;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  background-color: #FAFAFA;
+  margin-bottom: 8px;
+  text-indent: 36px;
+  color: #323232;
+}
+
+.location__search-input::-webkit-input-placeholder {
+  color: #323232;
+}
+
+.location__search-input:-ms-input-placeholder {
+  color: #323232;
+}
+
+.location__search-input::-ms-input-placeholder {
+  color: #323232;
+}
+
+.location__search-input::placeholder {
+  color: #323232;
+}
+
+.location__search-input:focus {
+  border: 2px solid #0095FF;
+  outline: none;
 }
 
 .location__row {
@@ -157,6 +281,33 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .location {
+    padding: 48px 3.125vw 0 3.125vw;
+  }
+  .location__title-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  .location__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    font-size: 24px;
+    line-height: 24px;
+    font-family: "AvenirNextBold";
+    margin-bottom: 0;
+  }
   .location__row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -171,43 +322,11 @@
     width: 720px;
   }
   .location__content {
-=======
-.nav__list-inventory {
-  width: 50%;
-  padding-bottom: 5px;
-  text-align: center;
-  border-bottom: 4px solid #FFFFFF;
-}
-
-.nav__list-locations {
-  width: 50%;
-  text-align: center;
-}
-
-.nav__list-inventory.active {
-  border-bottom: none;
-  text-decoration: none;
-  color: #FFFFFF;
-}
-
-.nav__list-locations.inactive {
-  text-decoration: none;
-  color: #AFAFAF;
-  width: 50%;
-  padding-bottom: 5px;
-}
-
-/* ----- Media Queries: Tablet ----- */
-@media only screen and (min-width: 768px) {
-  .nav {
-    height: 80px;
->>>>>>> development
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-<<<<<<< HEAD
         -ms-flex-direction: column;
             flex-direction: column;
     width: 704px;
@@ -289,44 +408,10 @@
         -ms-flex-align: start;
             align-items: flex-start;
     width: 54px;
-=======
-        -ms-flex-direction: flow;
-            flex-direction: flow;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .nav__logo {
-    margin-top: unset;
-    margin-left: 3.125vw;
-    margin-right: 56px;
-  }
-  .nav__menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .nav__list-inventory {
-    border-bottom: none;
-    padding: unset;
-    width: 12vw;
-  }
-  .nav__list-inventory.active {
-    border-bottom: 4px solid #FFFFFF;
-    padding: 27.5px;
-  }
-  .nav__list-locations.inactive {
-    margin-left: 30px;
-    padding: 28px;
->>>>>>> development
   }
 }
 
 @media only screen and (min-width: 1440px) {
-<<<<<<< HEAD
   .location {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -437,10 +522,6 @@
             align-items: center;
     width: 16px;
     padding-right: 24px;
-=======
-  .nav__logo {
-    margin-left: 180px;
->>>>>>> development
   }
 }
 
