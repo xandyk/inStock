@@ -1,4 +1,5 @@
 import React from "react";
+import Kebab from "../../assets/icons/kebab-default.svg"
 
 export default function Product(props) {
   return (
@@ -10,6 +11,7 @@ export default function Product(props) {
             <input className="product__input" type="text" name="search" placeholder="          Search"></input>
         </form>
       </div>
+    <div className="product__large-container">
       <div className="product__mid-container">
         <div className="product__label-container">
           <h5 className="product__label">ITEM</h5>
@@ -35,6 +37,8 @@ export default function Product(props) {
           <h4 className="product__data">In Stock</h4>
       </div>
       </div>
+      <div className="product__button-container"><img src={Kebab} alt="kebab"/></div>
+      </div>      
       </div>
   );
 }

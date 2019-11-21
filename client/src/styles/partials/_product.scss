@@ -1,3 +1,4 @@
+
 @mixin header {
   color: $black;
   font-family: AvenirNextBold;
@@ -71,6 +72,11 @@
     flex-direction: row;
 }
 
+&__large-container{
+    display: flex;
+    flex-direction: row;
+}
+
 &__top-container{
     display: flex;
     flex-direction: column;
@@ -81,6 +87,7 @@
 &__mid-container{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 &__data-container{
@@ -119,12 +126,8 @@
     background-position: 5%;
 }
 
-&__button{
-    display: flex;
-    background-color: $instock-blue-dark;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
+&__button-container{
+    margin-right: 2%;
 }
 }
 
@@ -132,6 +135,10 @@
     .product{
         margin-left: 3%;
         margin-right: 3%;
+
+    &__button-container{
+    padding-top: 27px;
+    }
 
     &__top-container{
         flex-direction: row;
