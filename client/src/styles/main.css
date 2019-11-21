@@ -32,6 +32,30 @@
   display: flex;
 }
 
+.location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.location__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "AvenirNextBold";
+}
+
 .location__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -232,6 +256,16 @@
 }
 
 @media only screen and (min-width: 1440px) {
+  .location {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .location__title {
+    font-family: "AvenirNextBold";
+    font-size: 36px;
+    line-height: 44px;
+  }
   .location__row {
     display: -webkit-box;
     display: -ms-flexbox;
