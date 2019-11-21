@@ -11,10 +11,10 @@ import logo from '../../assets/logo/instock.svg';
       <nav className="nav__wrapper">
         <ul className="nav__menu">
           <li className="nav__list-inventory">
-            <Link className="nav__list-inventory active" to="/inventory"></Link>
+            <Link className="nav__list-inventory active" to="/inventory">Inventory</Link>
           </li>
           <li className="nav__list-locations">
-            <Link className="nav__list-locations inactive" to="/locations"></Link>
+            <Link className="nav__list-locations inactive" to="/locations">Locations</Link>
           </li>
         </ul>
       </nav>
