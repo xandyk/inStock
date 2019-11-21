@@ -45,6 +45,7 @@
   margin-right: 5%;
   border-bottom-style: solid;
   border-color: silver;
+  padding-bottom: 24px;
 }
 
 .product__bottom-container {
@@ -125,7 +126,7 @@
 
 .product__input {
   border-radius: 4px;
-  height: 40px;
+  height: 48px;
   width: 252px;
   background-image: url("../assets/icons/search.svg");
   background-repeat: no-repeat;
@@ -143,6 +144,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .product {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
   .product__top-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -164,15 +169,36 @@
   .product__label-container {
     margin-right: 3%;
   }
-  .product {
-    margin-left: 3%;
-    margin-right: 3%;
-  }
   .product__name {
     margin: 0;
   }
   .product__data {
     margin: 0;
+  }
+  .product__header {
+    font-family: AvenirNextBold;
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .product__name {
+    font-family: AvenirNextMedium;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .product__data {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: AvenirNextRegular;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .product {
+    margin-right: 13%;
+    margin-left: 13%;
+  }
+  __name {
+    margin-bottom: 8px;
   }
 }
 

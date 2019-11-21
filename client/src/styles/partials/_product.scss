@@ -26,6 +26,37 @@
   color: $silver;
 }
 
+@mixin large-header {
+    font-family: AvenirNextBold;
+    font-size: 60px;
+    line-height: 68px;
+  }
+
+  @mixin tab-header {
+    font-family: AvenirNextBold;
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  @mixin tab-subheader {
+    font-family: AvenirNextMedium;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @mixin tab-paragraph {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: AvenirNextRegular;
+  }
+
+  @mixin lists {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: AvenirNextRegular;
+  }
+
+
 .product{
     display: flex;
     flex-direction: column;
@@ -33,6 +64,7 @@
     margin-right: 5%;
     border-bottom-style: solid;
     border-color: silver;
+    padding-bottom: 24px;
 
 &__bottom-container{
     display: flex;
@@ -58,13 +90,13 @@
 
 &__label{
     margin-bottom: 16px;
-    @include label
+    @include label;
     color: $silver;
 }
 
 &__data{
     margin-bottom: 24px;
-    @include paragraph
+    @include paragraph;
 }
 
 &__header{
@@ -80,7 +112,7 @@
 
 &__input{
     border-radius: 4px;
-    height: 40px;
+    height: 48px;
     width: 252px;
     background-image: url("../assets/icons/search.svg");
     background-repeat: no-repeat;
@@ -97,28 +129,49 @@
 }
 
 @include medium{
-    .product__top-container{
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .product__mid-container{
-        flex-direction: row;
-    }
-
-    .product__data-container{
-        margin-right: 3%;
-    }
-    .product__label-container{
-        margin-right: 3%;
-    }
     .product{
         margin-left: 3%;
         margin-right: 3%;
+
+    &__top-container{
+        flex-direction: row;
+        justify-content: space-between;
     }
-    .product__name{
+    &__mid-container{
+        flex-direction: row;
+    }
+
+    &__data-container{
+        margin-right: 3%;
+    }
+    &__label-container{
+        margin-right: 3%;
+    }
+    
+    &__name{
         margin: 0;
     }
-    .product__data{
+    &__data{
         margin: 0;
     }
+    &__header{
+        @include tab-header;
+    }
+    &__name{
+        @include tab-subheader;
+    }
+    &__data{
+        @include tab-paragraph;
+    }
+    }
+}
+
+@include huge{
+   .product{
+    margin-right: 13%;
+    margin-left: 13%;
+   }
+   &__name{
+       margin-bottom: 8px;
+   }
 }
