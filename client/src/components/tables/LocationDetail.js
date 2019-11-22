@@ -1,23 +1,23 @@
 import React from 'react'
+import backArrow from '../../assets/icons/back-arrow.svg'
+
 
 export default function LocationDetail(props) {
-    const locationData = props.locationList.filter((location) => {
+    const locationData = props.locationList.find((location) => {
         return (props.match.params.id === location.id
 
         )
     })
     console.log(locationData)
     return (
-        <div className="location">
-            <div className="location__heading">
-                <div className="location__title-box">
-                    <h1 className="location__title">Locations</h1>
-                </div>
-                <div className="location__search-container">
+        <div className="locationDetail">
+            <div className="locationDetail__heading">
 
-                    {/* <img className="location__search-icon" src={search} alt="Search Icon"></img> */}
-                    <input className="location__search-input" type="search" name="profileName" id="fname"
-                        placeholder="Search"></input>
+                <div className="locationDetail__title-box">
+                    <div className="locationDetail__backArrow-box">
+                        <img className="locationDetail__backArrow" src={backArrow} />
+                    </div>
+                    <h1 className="locationDetail__title">{locationData.name}</h1>
                 </div>
             </div>
             {/* {locationTable} */}

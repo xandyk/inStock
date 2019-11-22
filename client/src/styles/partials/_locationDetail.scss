@@ -1,4 +1,4 @@
-.location {
+.locationDetail {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,6 +11,7 @@
     &__heading {
             display: flex;
             flex-direction: column;
+            align-items: baseline;
             justify-content: space-between;
             width: 288px;
         }
@@ -59,10 +60,6 @@
         }
 
     }
-
-    &__labels{
-            display: none;   
-        }
 
     &__row{
         display: flex;
@@ -148,66 +145,46 @@
 }
 
 @include medium {
-    .location {
+    .locationDetail {
         padding: 48px 3.125vw 0 3.125vw;
 
         &__heading {
             display: flex;
             flex-direction: row;
+            align-items: baseline;
             justify-content: space-between;
             width: 720px;
-            margin-bottom: 8px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid $mercury;
         }
 
         &__title-box{
             display: flex;
             flex-direction: row;
-            height: 48px;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        &__backArrow-box{
+            display: flex;
+            height: 16px;
+            margin-right: 24px;
+            padding-top: 4px;
+        }
+
+        &__backArrow{
+            display: flex;
+            height: 24px;
         }
 
         &__title {
             display: flex;
-            align-self: center;
+            // align-self: flex-start;
             // flex-direction: row;
             // justify-self: flex-start;
             font-size: 36px;
             line-height: 36px;
             font-family: "AvenirNextBold";
             margin-bottom: 0;
-        }
-
-         &__search-container {
-            display: flex;
-            position: relative;
-        }
-
-        &__search-icon {
-            position: absolute;
-            color: $black;
-            top: 15px;
-            left: 16px;
-        }
-
-        &__search-input {
-            @include mob__h4-paragraph;
-            height: 48px;
-            width: 252px;
-            border: 1px solid $mercury;
-            border-radius: 2px;
-            background-color: $alabaster;
-            margin-bottom: 0;
-            text-indent: 40px;
-            color: $black;
-
-            &::placeholder {
-                color: $black;
-            }
-
-            &:focus {
-                border: 2px solid $black;
-                outline: none;
-            }
-
         }
 
         &__row{
@@ -235,7 +212,7 @@
             font-family: "AvenirNextMedium";
             font-size: 14px;
             line-height: 14px;
-            margin-bottom: 4px;
+            margin-bottom: 12px;
             @include desk__h3;
         }
 
@@ -296,7 +273,7 @@
 }
 
 @include large {
-    .location {
+    .locationDetail {
         display: flex;
 
         &__heading {
@@ -321,25 +298,6 @@
             padding-bottom: 24px;
             border-bottom: 1px solid $mercury;
             width:1080px;
-        }
-
-        &__labels{
-            display: flex;   
-            flex-direction: row;
-            width: 1080px;
-            padding-left: 8px;
-
-            &-text {
-                font-size: 12px;
-                line-height: 18px;
-                font-family: "AvenirNextRegular";
-                color: $silver;
-                width: 276px;
-
-                &--last {
-                    width: 252px;
-                }
-            }
         }
 
         &__content{
