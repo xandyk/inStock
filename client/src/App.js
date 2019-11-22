@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Navbar from './components/navbar/Navbar';
 import Inventory from './components/navbar/Inventory';
 import Locations from './components/navbar/Locations';
-import { BrowserRouter, Route } from 'react-router-dom';
+import LocationDetail from './components/tables/LocationDetail';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NewInventory from './components/forms/NewInventory';
 
 import Location from './components/tables/Location';
@@ -178,17 +179,27 @@ export default function App() {
       <BrowserRouter>
         <div className="App">
           <Navbar />
+          {/* <Switch> */}
           {/* <Route path="/NewInventory" component={NewInventory} /> */}
           <Route path="/inventory" component={Inventory} />
           {/* <Route path="/locations" component={Locations} /> */}
           <Route
-            path="/locations"
+            path="/locations" exact
             render={props =>
               <>
                 <Locations locationList={locationList} />
               </>
             }
           />
+          <Route
+            path="/locations/:id"
+            render={props =>
+              <>
+                <LocationDetail {...props} locationList={locationList} />
+              </>
+            }
+          />
+          {/* </Switch> */}
         </div>
       </BrowserRouter>
     </div>

@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import rightArrow from '../../assets/icons/right-arrow.svg'
 
 export default function Location(props) {
-    const { name, address, contact, categories } = props.locationData
+    const { id, name, address, contact, categories } = props.locationData
     return (
         <div className="location__row">
             <div className="location__content">
@@ -26,9 +27,14 @@ export default function Location(props) {
                     </div>
                 </div>
             </div>
+            {/* <Link key={index} to={`/locations/${id}`}> */}
+
             <div className="location__image-box">
-                <img className="location__right-arrow" src={rightArrow} alt="right arrow"></img>
+                <Link to={`/locations/${id}`}>
+                    <img className="location__right-arrow" src={rightArrow} alt="right arrow"></img>
+                </Link>
             </div>
+
         </div>
     )
 }
