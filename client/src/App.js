@@ -178,6 +178,7 @@ export default function App() {
       <BrowserRouter>
         <div className="App">
           <Navbar />
+          {/* <Route path="/NewInventory" component={NewInventory} /> */}
           <Route path="/inventory" component={Inventory} />
           {/* <Route path="/locations" component={Locations} /> */}
           <Route

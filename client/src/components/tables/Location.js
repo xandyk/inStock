@@ -27,7 +27,7 @@ export default function Location(props) {
                 </div>
             </div>
             <div className="location__image-box">
-                <img src={rightArrow} alt="right arrow"></img>
+                <img className="location__right-arrow" src={rightArrow} alt="right arrow"></img>
             </div>
         </div>
     )

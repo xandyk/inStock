@@ -8,6 +8,14 @@
     // justify-content: center;
     // @include mob__h5;
 
+    &__heading {
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            justify-content: space-between;
+            width: 288px;
+        }
+
     &__title {
         display: flex;
         align-self: flex-start;
@@ -28,18 +36,18 @@
         position: absolute;
         color: $black;
         top: 15px;
-        left: 12px;
+        left: 16px;
     }
 
     &__search-input {
         @include mob__h4-paragraph;
-        height: 49px;
-        width: 288px;
+        height: 48px;
+        width: 252px;
         border: 1px solid $mercury;
-        border-radius: 4px;
+        border-radius: 2px;
         background-color: $alabaster;
         margin-bottom: 8px;
-        text-indent: 36px;
+        text-indent: 40px;
         color: $black;
 
         &::placeholder {
@@ -47,7 +55,7 @@
         }
 
         &:focus {
-            border: 2px solid $brainflix-blue;
+            border: 2px solid $black;
             outline: none;
         }
 
@@ -126,11 +134,14 @@
         align-items: flex-start;
         width: 54px;
     }
-    
-    &:focus {
-            border: 2px solid $brainflix-blue;
-            outline: none;
+    &__right-arrow{
+        &:focus {
+            filter: invert(1);
         }
+        &:hover {
+            filter: invert(1);
+        }
+    }
 }
 
 @include medium {
@@ -159,43 +170,7 @@
             line-height: 24px;
             font-family: "AvenirNextBold";
             margin-bottom: 0;
-
         }
-
-        &__search-container {
-            display: flex;
-            position: relative;
-        }
-
-        &__search-icon {
-            position: absolute;
-            color: $black;
-            top: 15px;
-            left: 12px;
-        }
-
-        &__search-input {
-            @include mob__h4-paragraph;
-            height: 49px;
-            width: 288px;
-            border: 1px solid $mercury;
-            border-radius: 4px;
-            background-color: $alabaster;
-            margin-bottom: 0;
-            text-indent: 36px;
-            color: $black;
-
-            &::placeholder {
-                color: $black;
-            }
-
-            &:focus {
-                border: 2px solid $brainflix-blue;
-                outline: none;
-            }
-
-        }
-
 
         &__row{
             display: flex;
