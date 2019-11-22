@@ -65,6 +65,7 @@
     margin-right: 5%;
     border-bottom-style: solid;
     border-color: silver;
+    margin-bottom: 24px;
     padding-bottom: 24px;
 
 &__bottom-container{
@@ -129,20 +130,26 @@
 &__button-container{
     margin-right: 2%;
 }
+
+&__label-tab{
+    display: none;
+}
 }
 
 @include medium{
     .product{
-        margin-left: 3%;
-        margin-right: 3%;
-
-    &__button-container{
-    padding-top: 27px;
+    margin-left: 0;
+    margin-right: 0;
+    
+    &__label-container{
+        width: 40%;
     }
 
     &__top-container{
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin-bottom: 0;
     }
     &__mid-container{
         flex-direction: row;
@@ -150,9 +157,14 @@
 
     &__data-container{
         margin-right: 3%;
+        width: 10%;
     }
     &__label-container{
         margin-right: 3%;
+    }
+
+    &__label{
+        display: none;
     }
     
     &__name{
@@ -170,15 +182,34 @@
     &__data{
         @include tab-paragraph;
     }
+
+    &__top-label-container{
+        flex-direction: column;
+    }
+    &__inventory-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__label-tab{
+        display: flex;
+        @include label;
+        width: 14%;
+        margin-right: 8%;
+    }
+
+    &__side-container{
+        display: flex;
+        flex-direction: row;
+        width: 58%;
     }
 }
 
 @include huge{
    .product{
-    margin-right: 13%;
-    margin-left: 13%;
-   }
    &__name{
        margin-bottom: 8px;
    }
+}
+}
 }

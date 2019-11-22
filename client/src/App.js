@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import Product from './components/table/product';
+import Inventory from "./components/navbar/Inventory";
 import './styles/main.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function Product(props){
 
 const productList = [
 
@@ -179,13 +179,12 @@ const productList = [
                   ]
 }
 ]
-}
 
 export default class App extends Component{
   render() {
     return (
-        <div className="App">
-          <Product/>
+      <div className="App">
+        <Inventory productList={productList} />
         </div>
     );
   }
