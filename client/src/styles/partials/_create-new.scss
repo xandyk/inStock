@@ -1,10 +1,82 @@
+.inventory__header, .inventory__container, .btn-container{
+    margin-left: 5vw;
+}
+
+.inventory__box, .btn-save, .btn-cancel{
+    border-radius: 5px;
+    border: 1px solid $mercury;
+    background-color: $alabaster;
+    height: 48px;
+    width: 68.75vw;
+    padding-left: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.inventory__label {
+    color: $silver;
+    margin-top: 32px;
+    margin-bottom: unset;    
+}
+
+.css-2b097c-container {
+    width: 68.75vw;
+
+}
+
+// .css-yk16xz-control {
+//     background-color
+// }
 
 
+.css-1uccc91-singleValue {
+    font-size: 12px;
+}
 
+.status__box {
+    display: flex;
+    width: 68.75vw;
+    justify-content: space-between;
+}
 
+.inventory__box-description {
+    border-radius: 5px;
+    background-color: $alabaster;
+    border: 1px solid $mercury;
+    height: 80px;
+    width: 68.75vw;
+    padding-left: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
 
+.btn-save, .btn-cancel {
+    font-family: 'AvenirNextMedium';
+    font-size: 16px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
 
+.btn-save {
+    background-color: $instock-blue;
+    border-color: none;
+    color: $white;
+    margin-top: 32px;
+    margin-bottom: 15px;
+}
 
+.btn-cancel {
+    background-color: $white;
+    border: none;
+    color: $instock-blue;
+}
 
 
 
@@ -18,7 +90,6 @@
         grid-template-columns: 15.278vw 15.278vw;
         grid-template-rows: 48px, 48px, 48px;
         grid-gap: 1.5rem;
-    
     }
 
 }

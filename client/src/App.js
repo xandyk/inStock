@@ -4,7 +4,6 @@ import Inventory from './components/navbar/Inventory';
 import Locations from './components/navbar/Locations';
 import { BrowserRouter, Route } from 'react-router-dom';
 import NewInventory from './components/forms/NewInventory';
-
 import Location from './components/tables/Location';
 
 const locationList = [
@@ -179,9 +178,9 @@ export default function App() {
         <div className="App">
           <Navbar />
           <Route path="/inventory" component={Inventory} />
-          {/* <Route path="/locations" component={Locations} /> */}
-          <Route
-            path="/locations"
+          <Route path="/inventory/new" component={NewInventory} />
+
+          <Route path="/locations"
             render={props =>
               <>
                 <Locations locationList={locationList} />
