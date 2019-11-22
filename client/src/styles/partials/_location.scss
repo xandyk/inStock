@@ -135,22 +135,13 @@
         width: 54px;
     }
     &__right-arrow{
-        // background-color: #000000;
-        // to black
-        // filter: invert(1);
-        // or to blue
-        // filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
         &:focus {
-                filter: invert(1);
-                // border: 2px solid $brainflix-blue;
-                // outline: none;
-            }
+            filter: invert(1);
+        }
         &:hover {
             filter: invert(1);
-            // border: 2px solid $brainflix-blue;
-            // outline: none;
         }
-        }
+    }
 }
 
 @include medium {
