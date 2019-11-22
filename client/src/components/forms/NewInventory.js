@@ -36,12 +36,12 @@ export default class NewInventory extends Component {
 
                     <div className="inventory__row-three">
                         <div className="box">
-                            <h6 className="inventory__label">QUANTITY</h6>
+                            <h6 className="inventory__label quantity">QUANTITY</h6>
                             <input className="inventory__box"type="text" name="quantity" placeholder="0"/>
                         </div>
                         
                         <div className="box">
-                            <h6 className="inventory__label">STATUS</h6>
+                            <h6 className="inventory__label status">STATUS</h6>
                             <div className="status__box">
                                 <span>In Stock</span>
                                 <span><Switch /></span>
@@ -49,9 +49,12 @@ export default class NewInventory extends Component {
                         </div>
                     </div>
 
-                    <div className="box"></div>
-                    <h6 className="inventory__label">ITEM DESCRIPTION</h6>
-                    <input className="inventory__box-description" type="text" name="item-description" placeholder="(Optional)" />
+                    <div className="inventory__row-four">
+                        <div className="box description">
+                            <h6 className="inventory__label">ITEM DESCRIPTION</h6>
+                            <input className="inventory__box-description" type="text" name="item-description" placeholder="(Optional)" />
+                        </div>
+                    </div>
                 </form>
 
                 <div className="btn-container">
