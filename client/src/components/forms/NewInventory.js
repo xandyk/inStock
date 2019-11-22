@@ -19,7 +19,7 @@ export default class NewInventory extends Component {
                         </div>
                         <div className="box">
                             <h6 className="inventory__label">LAST ORDERED</h6>
-                            <input className="inventory__box" type="text" name="ordered-date" placeholder="yyy-mm-dd"/>
+                            <input className="inventory__box" type="text" name="ordered-date" placeholder="yyyy-mm-dd"/>
                         </div>
                     </div>
 
@@ -55,12 +55,13 @@ export default class NewInventory extends Component {
                             <input className="inventory__box-description" type="text" name="item-description" placeholder="(Optional)" />
                         </div>
                     </div>
-                </form>
-
-                <div className="btn-container">
+                    <div className="btn-container">
                     <button className="btn-save">SAVE</button>
                     <button className="btn-cancel">CANCEL</button>
                 </div>
+                </form>
+
+                
             </>
         )
     }

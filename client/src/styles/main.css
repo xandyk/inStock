@@ -739,6 +739,32 @@
   }
 }
 
+/* ----- Media Queries: Desktop ----- */
+@media only screen and (min-width: 1440px) {
+  .inventory__container {
+    margin: 0 auto;
+    width: 40vw;
+    height: 624px;
+  }
+  .inventory__header {
+    margin: 56px 0 48px 0 8.33vw;
+  }
+  .inventory-row-one {
+    width: unset;
+    width: 36.11vw;
+  }
+  .inventory__box {
+    width: 15.28vw;
+  }
+  .inventory__box-description {
+    width: 83.33vw;
+  }
+  .btn-container {
+    margin-left: unset;
+    width: 83.33vw;
+  }
+}
+
 html,
 body {
   margin: 0;
