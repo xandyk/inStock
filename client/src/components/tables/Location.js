@@ -3,18 +3,18 @@ import { Link } from 'react-router-dom'
 import rightArrow from '../../assets/icons/right-arrow.svg'
 
 export default function Location(props) {
-    const { id, name, address, contact, categories } = props.locationData
+    const { id, name, address, location, contact, categories } = props.locationData
     return (
         <div className="location__row">
             <div className="location__content">
                 <div className="location__warehouse">
                     <h2 className="location__name">{name}</h2>
-                    <h5 className="location__address">{address}</h5>
+                    <h5 className="location__address">{address}, {location}</h5>
                 </div>
                 <div className="location__subcontainer">
                     <div className="location__contact">
                         <h5 className="location__contact-name">{contact.name}</h5>
-                        <h5 className="location__contact-role">{contact.role}</h5>
+                        <h5 className="location__contact-role">{contact.position}</h5>
                     </div>
                     <div className="location__contactinfo">
                         <h5 className="location__contactinfo-phone">{contact.phone}</h5>
