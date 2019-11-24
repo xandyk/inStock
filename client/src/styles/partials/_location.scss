@@ -295,7 +295,7 @@
     }
 }
 
-@include large {
+@include huge {
     .location {
         display: flex;
 
@@ -305,12 +305,13 @@
             align-items: baseline;
             justify-content: space-between;
             width: 1080px;
+            margin-bottom: 24px;
         }
 
         &__title{
             font-family: "AvenirNextBold";
             font-size: 36px;
-            line-height: 44px;
+            line-height: 48px;
         }
 
         &__row{

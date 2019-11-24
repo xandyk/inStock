@@ -716,7 +716,7 @@
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1440px) {
   .location {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -737,11 +737,12 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 1080px;
+    margin-bottom: 24px;
   }
   .location__title {
     font-family: "AvenirNextBold";
     font-size: 36px;
-    line-height: 44px;
+    line-height: 48px;
   }
   .location__row {
     display: -webkit-box;
@@ -1227,7 +1228,7 @@
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1440px) {
   .locationDetail {
     display: -webkit-box;
     display: -ms-flexbox;
