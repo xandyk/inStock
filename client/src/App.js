@@ -173,7 +173,7 @@ const locationList = [
 
 export default function App() {
   return (
-    <div className="App">
+    <div>
       <BrowserRouter>
         <div className="App">
           <Navbar />

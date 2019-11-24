@@ -653,6 +653,10 @@
   -o-border-radius: 5px;
 }
 
+.btn-container {
+  margin-left: unset;
+}
+
 .btn-save, .btn-cancel {
   font-family: 'AvenirNextMedium';
   font-size: 16px;
@@ -715,6 +719,9 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .react-switch-bg {
+    width: 24px;
+  }
   .btn-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -729,12 +736,13 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-left: 190px;
+    margin-left: 113px;
+    width: 63.89vw;
   }
   .btn-save, .btn-cancel {
     -ms-flex-item-align: baseline;
         align-self: baseline;
-    margin-top: 48px;
+    margin-top: 40px;
     width: 20.83vw;
   }
 }
@@ -747,7 +755,8 @@
     height: 624px;
   }
   .inventory__header {
-    margin: 56px 0 48px 0 8.33vw;
+    width: 480px;
+    margin: 56px 0 0 470px;
   }
   .inventory-row-one {
     width: unset;
@@ -759,9 +768,16 @@
   .inventory__box-description {
     width: 83.33vw;
   }
+  .css-yk16xz-control, .status__box {
+    width: 220px;
+  }
   .btn-container {
     margin-left: unset;
-    width: 83.33vw;
+    width: 480px;
+    margin-left: 40px;
+  }
+  .inventory__box-description {
+    width: 480px;
   }
 }
 

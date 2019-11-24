@@ -51,6 +51,10 @@
     -o-border-radius: 5px;
 }
 
+.btn-container {
+    margin-left: unset;
+}
+
 .btn-save, .btn-cancel {
     font-family: 'AvenirNextMedium';
     font-size: 16px;
@@ -117,20 +121,24 @@ span {
     flex-direction: column;
     }
 
+.react-switch-bg {
+    width: 24px;
+}
+
 .btn-container {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
-    margin-left: 190px;
+    margin-left: 113px;
+    width: 63.89vw;
     }
 
 .btn-save, .btn-cancel {
     align-self: baseline;
-    margin-top: 48px;
+    margin-top: 40px;
     width: 20.83vw;
     }
-
 }
 
 
@@ -144,7 +152,8 @@ span {
     }
 
     .inventory__header {
-        margin: 56px 0 48px 0 8.33vw;
+        width: 480px;
+        margin: 56px 0 0 470px;
     }
 
     .inventory-row-one {
@@ -160,8 +169,17 @@ span {
         width: 83.33vw;
     }
 
+    .css-yk16xz-control, .status__box {
+        width: 220px;
+        } 
+     
     .btn-container {
         margin-left: unset;
-        width: 83.33vw;
+        width: 480px;
+        margin-left: 40px;
     }
+
+    .inventory__box-description {
+        width: 480px;
+        }
 }
