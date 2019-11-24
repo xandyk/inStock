@@ -188,8 +188,8 @@ export default function App() {
       <BrowserRouter>
         <div className="App">
           <Navbar />
-          <Route path="/inventory" component={Inventory} />
-          <Route path="/inventory/new" component={NewInventory} />
+          <Route path="/inventory" exact component={Inventory} />
+          <Route path="/inventory/new" exact component={NewInventory} />
 
           <Route path="/locations"/>
           {/* <Route path="/NewInventory" component={NewInventory} /> */}
@@ -202,14 +202,14 @@ export default function App() {
             }
             />
           {/* <Route path="/locations" component={Locations} /> */}
-          <Route
+          {/* <Route
             path="/locations"
             render={props =>
               <>
                 <Locations locationList={locationList} />
               </>
             }
-          />
+          /> */}
         </div>
         </BrowserRouter>
         </div>

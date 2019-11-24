@@ -4,22 +4,32 @@ import Switch from '../buttons/switch';
 import Select from '../buttons/select';
 
 
+export default class NewInventory extends Component { 
 
-export default class NewInventory extends Component {
+ newFormInfo = (event) => {  
+    event.preventDefault()
+    console.log(event.target.itemName.value)
+    console.log(event.target.orderedDate.value)
+    console.log(event.target.city.value)
+    console.log(event.target.quantity.value)
+    console.log(event.target.itemDescription.value)
+    ;
+ }
+
     render() {
         return (
             <>
                 <h1 className="inventory__header">Create New</h1>
 
-                <form className="inventory__container">
+                <form onSubmit = {event => this.newFormInfo(event)} className="inventory__container">
                     <div className="inventory__row-one">
                         <div className="box">
                             <h6 className="inventory__label">PRODUCT</h6>
-                            <input className="inventory__box" type="text" name="item-name"placeholder="Item Name"/>
+                            <input className="inventory__box" type="text" name="itemName" placeholder="Item Name"/>
                         </div>
                         <div className="box">
                             <h6 className="inventory__label">LAST ORDERED</h6>
-                            <input className="inventory__box" type="text" name="ordered-date" placeholder="yyyy-mm-dd"/>
+                            <input className="inventory__box" type="text" name="orderedDate" placeholder="yyyy-mm-dd"/>
                         </div>
                     </div>
 
@@ -52,16 +62,14 @@ export default class NewInventory extends Component {
                     <div className="inventory__row-four">
                         <div className="box description">
                             <h6 className="inventory__label">ITEM DESCRIPTION</h6>
-                            <input className="inventory__box-description" type="text" name="item-description" placeholder="(Optional)" />
+                            <input className="inventory__box-description" type="text" name="itemDescription" placeholder="(Optional)" />
                         </div>
                     </div>
                     <div className="btn-container">
-                    <button className="btn-save">SAVE</button>
+                    <button  type = 'submit' className="btn-save">SAVE</button>
                     <button className="btn-cancel">CANCEL</button>
                 </div>
-                </form>
-
-                
+                </form>               
             </>
         )
     }

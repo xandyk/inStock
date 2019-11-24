@@ -1,11 +1,12 @@
 import React from "react";
 import Product from "../table/product";
-
+import NewInventory from "../forms/NewInventory"
 export default function Inventory(props) {
-  const productTable = props.productList.map((product, index) => {
+  const productTable =  props.productList && props.productList.map((product, index) => {
     return <Product key={index} productData={product} />;
   });
   return (
+
     <div className="container">
       <div className="product__top-label-container">
         <div className="product__inventory-container">
