@@ -1,5 +1,6 @@
 /* media query for mobile */
 /* media query for tablet */
+/* media query for landscape, medium pixel density desktops */
 /* media query for high pixel density desktops */
 @font-face {
   font-family: 'AvenirNextRegular';
@@ -104,9 +105,234 @@
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1024px) {
   .nav__logo {
     margin-left: 180px;
+  }
+}
+
+.product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-bottom-style: solid;
+  border-color: silver;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+}
+
+.product__bottom-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.product__large-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.product__top-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.product__mid-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.product__data-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.product__label {
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 20px;
+  font-family: AvenirNextRegular;
+  color: #AFAFAF;
+  color: #AFAFAF;
+}
+
+.product__data {
+  margin-bottom: 24px;
+  color: #323232;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: AvenirNextRegular;
+}
+
+.product__header {
+  color: #323232;
+  font-family: AvenirNextBold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #323232;
+  margin-bottom: 16px;
+}
+
+.product__name {
+  margin-bottom: 16px;
+  color: #323232;
+  font-family: AvenirNextMedium;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.product__input {
+  border-radius: 4px;
+  height: 48px;
+  width: 252px;
+  background-image: url("../assets/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: 5%;
+}
+
+.product__button-container {
+  margin-right: 2%;
+}
+
+.product__label-tab {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .product {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .product__label-container {
+    width: 40%;
+  }
+  .product__top-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 0;
+  }
+  .product__mid-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .product__data-container {
+    margin-right: 3%;
+    width: 10%;
+  }
+  .product__label-container {
+    margin-right: 3%;
+  }
+  .product__label {
+    display: none;
+  }
+  .product__name {
+    margin: 0;
+  }
+  .product__data {
+    margin: 0;
+  }
+  .product__header {
+    font-family: AvenirNextBold;
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .product__name {
+    font-family: AvenirNextMedium;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .product__data {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: AvenirNextRegular;
+  }
+  .product__top-label-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .product__inventory-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .product__label-tab {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 12px;
+    line-height: 20px;
+    font-family: AvenirNextRegular;
+    color: #AFAFAF;
+    width: 14%;
+    margin-right: 8%;
+  }
+  .product__side-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 58%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .product__name {
+    margin-bottom: 8px;
   }
 }
 
@@ -122,6 +348,23 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 32px 5vw 0 5vw;
+}
+
+.location__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 288px;
 }
 
 .location__title {
@@ -147,20 +390,20 @@
   position: absolute;
   color: #323232;
   top: 15px;
-  left: 12px;
+  left: 16px;
 }
 
 .location__search-input {
   font-family: "AvenirNextRegular";
   font-size: 13px;
   line-height: 18px;
-  height: 49px;
-  width: 288px;
+  height: 48px;
+  width: 252px;
   border: 1px solid #e1e1e1;
-  border-radius: 4px;
+  border-radius: 2px;
   background-color: #FAFAFA;
   margin-bottom: 8px;
-  text-indent: 36px;
+  text-indent: 40px;
   color: #323232;
 }
 
@@ -181,7 +424,7 @@
 }
 
 .location__search-input:focus {
-  border: 2px solid #0095FF;
+  border: 2px solid #323232;
   outline: none;
 }
 
@@ -280,9 +523,14 @@
   width: 54px;
 }
 
-.location:focus {
-  border: 2px solid #0095FF;
-  outline: none;
+.location__right-arrow:focus {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.location__right-arrow:hover {
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 @media only screen and (min-width: 768px) {
@@ -322,47 +570,6 @@
     line-height: 24px;
     font-family: "AvenirNextBold";
     margin-bottom: 0;
-  }
-  .location__search-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-  }
-  .location__search-icon {
-    position: absolute;
-    color: #323232;
-    top: 15px;
-    left: 12px;
-  }
-  .location__search-input {
-    font-family: "AvenirNextRegular";
-    font-size: 13px;
-    line-height: 18px;
-    height: 49px;
-    width: 288px;
-    border: 1px solid #e1e1e1;
-    border-radius: 4px;
-    background-color: #FAFAFA;
-    margin-bottom: 0;
-    text-indent: 36px;
-    color: #323232;
-  }
-  .location__search-input::-webkit-input-placeholder {
-    color: #323232;
-  }
-  .location__search-input:-ms-input-placeholder {
-    color: #323232;
-  }
-  .location__search-input::-ms-input-placeholder {
-    color: #323232;
-  }
-  .location__search-input::placeholder {
-    color: #323232;
-  }
-  .location__search-input:focus {
-    border: 2px solid #0095FF;
-    outline: none;
   }
   .location__row {
     display: -webkit-box;
@@ -466,7 +673,7 @@
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1024px) {
   .location {
     display: -webkit-box;
     display: -ms-flexbox;
