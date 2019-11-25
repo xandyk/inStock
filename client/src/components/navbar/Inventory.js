@@ -1,11 +1,11 @@
 import React from "react";
 import Product from "../table/product";
-
 export default function Inventory(props) {
-  const productTable = props.productList.map((product, index) => {
+  const productTable =  props.productList && props.productList.map((product, index) => {
     return <Product key={index} productData={product} />;
   });
   return (
+
     <div className="container">
       <div className="product__top-label-container">
         <div className="product__inventory-container">
@@ -16,7 +16,7 @@ export default function Inventory(props) {
               className="product__input"
               type="text"
               name="search"
-              placeholder="          Search"
+              placeholder="Search"
             ></input>
           </form>
         </div>
@@ -31,6 +31,6 @@ export default function Inventory(props) {
         </div>
       </div>
       {productTable}
-    </div>
+    // </div>
   );
 }
