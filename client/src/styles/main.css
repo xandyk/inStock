@@ -155,8 +155,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 32px;
-  margin-bottom: 32px;
 }
 
 .product__mid-container {
@@ -250,6 +248,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin-top: 32px;
     margin-bottom: 0;
   }
   .product__mid-container {
@@ -358,9 +357,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -426,6 +422,10 @@
 .location__search-input:focus {
   border: 2px solid #323232;
   outline: none;
+}
+
+.location__labels {
+  display: none;
 }
 
 .location__row {
@@ -545,13 +545,11 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 720px;
+    margin-bottom: 8px;
   }
   .location__title-box {
     display: -webkit-box;
@@ -561,15 +559,59 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    height: 48px;
   }
   .location__title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-size: 24px;
-    line-height: 24px;
+    -ms-flex-item-align: center;
+        align-self: center;
+    font-size: 36px;
+    line-height: 36px;
     font-family: "AvenirNextBold";
     margin-bottom: 0;
+  }
+  .location__search-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+  .location__search-icon {
+    position: absolute;
+    color: #323232;
+    top: 15px;
+    left: 16px;
+  }
+  .location__search-input {
+    font-family: "AvenirNextRegular";
+    font-size: 13px;
+    line-height: 18px;
+    height: 48px;
+    width: 252px;
+    border: 1px solid #e1e1e1;
+    border-radius: 2px;
+    background-color: #FAFAFA;
+    margin-bottom: 0;
+    text-indent: 40px;
+    color: #323232;
+  }
+  .location__search-input::-webkit-input-placeholder {
+    color: #323232;
+  }
+  .location__search-input:-ms-input-placeholder {
+    color: #323232;
+  }
+  .location__search-input::-ms-input-placeholder {
+    color: #323232;
+  }
+  .location__search-input::placeholder {
+    color: #323232;
+  }
+  .location__search-input:focus {
+    border: 2px solid #323232;
+    outline: none;
   }
   .location__row {
     display: -webkit-box;
@@ -604,7 +646,7 @@
     font-family: "AvenirNextMedium";
     font-size: 14px;
     line-height: 14px;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
     font-size: 15.9px;
     line-height: 24px;
   }
@@ -673,7 +715,7 @@
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1440px) {
   .location {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -694,11 +736,12 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 1080px;
+    margin-bottom: 24px;
   }
   .location__title {
     font-family: "AvenirNextBold";
     font-size: 36px;
-    line-height: 44px;
+    line-height: 48px;
   }
   .location__row {
     display: -webkit-box;
@@ -712,6 +755,27 @@
     padding-bottom: 24px;
     border-bottom: 1px solid #e1e1e1;
     width: 1080px;
+  }
+  .location__labels {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 1080px;
+    padding-left: 8px;
+  }
+  .location__labels-text {
+    font-size: 12px;
+    line-height: 18px;
+    font-family: "AvenirNextRegular";
+    color: #AFAFAF;
+    width: 276px;
+  }
+  .location__labels-text--last {
+    width: 252px;
   }
   .location__content {
     display: -webkit-box;
@@ -801,6 +865,386 @@
             align-items: center;
     width: 16px;
     padding-right: 24px;
+  }
+}
+
+.locationDetail__upperContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 32px 5vw 0 5vw;
+}
+
+.locationDetail__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 288px;
+}
+
+.locationDetail__title-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 32px;
+}
+
+.locationDetail__backArrow-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 16px;
+  margin-right: 16px;
+  padding-top: 0;
+}
+
+.locationDetail__backArrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20px;
+}
+
+.locationDetail__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "AvenirNextBold";
+  margin-bottom: 0;
+}
+
+.locationDetail__information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 0;
+}
+
+.locationDetail__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 288px;
+  padding-left: 0;
+}
+
+.locationDetail__labels-text {
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "AvenirNextRegular";
+  color: #AFAFAF;
+  width: 276px;
+  margin-bottom: 16px;
+}
+
+.locationDetail__labels-text--last {
+  width: 252px;
+}
+
+.locationDetail__address {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+}
+
+.locationDetail__location {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.locationDetail__contact {
+  margin-bottom: 24px;
+}
+
+.locationDetail__contact-name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.locationDetail__contact-role {
+  font-weight: 500;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.locationDetail__contactinfo {
+  margin-bottom: 24px;
+}
+
+.locationDetail__contactinfo-phone {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  font-style: italic;
+}
+
+.locationDetail__contactinfo-email {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  font-style: italic;
+}
+
+.locationDetail__inventory {
+  padding-top: 24px;
+  background-color: #FAFAFA;
+}
+
+.locationDetail__inventory {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 24px 5vw 0 5vw;
+  background-color: #FAFAFA;
+}
+
+.locationDetail__inventory-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 288px;
+}
+
+@media only screen and (min-width: 768px) {
+  .locationDetail__upperContainer {
+    padding: 48px 3.125vw 0 3.125vw;
+  }
+  .locationDetail__heading {
+    width: 720px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  .locationDetail__title-box {
+    margin-bottom: 0;
+  }
+  .locationDetail__backArrow-box {
+    margin-right: 24px;
+    padding-top: 4px;
+  }
+  .locationDetail__backArrow {
+    height: 24px;
+  }
+  .locationDetail__title {
+    font-size: 36px;
+    line-height: 36px;
+    font-family: "AvenirNextBold";
+    margin-bottom: 0;
+  }
+  .locationDetail__information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-left: 0;
+    width: 720px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  .locationDetail__column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 360px;
+    padding-left: 0;
+  }
+  .locationDetail__labels-text {
+    font-size: 12px;
+    line-height: 18px;
+    font-family: "AvenirNextRegular";
+    color: #AFAFAF;
+    width: 276px;
+    margin-bottom: 16px;
+  }
+  .locationDetail__labels-text--last {
+    width: 252px;
+  }
+  .locationDetail__address-box {
+    height: 44px;
+    margin-bottom: 12px;
+  }
+  .locationDetail__location-box {
+    height: 44px;
+  }
+  .locationDetail__address {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .locationDetail__location {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .locationDetail__contact {
+    margin-bottom: 12px;
+    width: 248px;
+  }
+  .locationDetail__contact-name {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .locationDetail__contact-role {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .locationDetail__contactinfo {
+    margin-bottom: 0;
+    width: 248px;
+  }
+  .locationDetail__contactinfo-phone {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .locationDetail__contactinfo-email {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .locationDetail__inventory {
+    padding: 1px 3.125vw 0 3.125vw;
+  }
+  .locationDetail__inventory-box {
+    width: 720px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .locationDetail__upperContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .locationDetail__heading {
+    width: 1080px;
+  }
+  .locationDetail__title-box {
+    margin-bottom: 0;
+  }
+  .locationDetail__backArrow-box {
+    margin-right: 24px;
+    padding-top: 4px;
+  }
+  .locationDetail__backArrow {
+    height: 24px;
+  }
+  .locationDetail__title {
+    font-family: "AvenirNextBold";
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .locationDetail__information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-left: 0;
+    width: 1080px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  .locationDetail__column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 540px;
+    padding-left: 0;
+  }
+  .locationDetail__address {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .locationDetail__contact {
+    width: 276px;
+  }
+  .locationDetail__contact-name {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .locationDetail__contact-role {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .locationDetail__contactinfo {
+    margin-bottom: 0;
+    width: 276px;
+  }
+  .locationDetail__contactinfo-phone {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .locationDetail__contactinfo-email {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .locationDetail__inventory {
+    padding: 1px 3.125vw 0 3.125vw;
+  }
+  .locationDetail__inventory-box {
+    width: 1080px;
   }
 }
 

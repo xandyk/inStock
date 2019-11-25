@@ -1,0 +1,327 @@
+.locationDetail {
+    &__upperContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 32px 5vw 0 5vw;
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        width: 288px;
+    }
+
+    &__title-box{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        margin-bottom: 32px;
+    }
+
+    &__backArrow-box{
+        display: flex;
+        height: 16px;
+        margin-right: 16px;
+        padding-top: 0;
+    }
+
+    &__backArrow{
+        display: flex;
+        height: 20px;
+    }
+
+    &__title {
+        display: flex;
+        align-self: flex-start;
+        font-size: 24px;
+        line-height: 24px;
+        font-family: "AvenirNextBold";
+        margin-bottom: 0;
+    }
+
+    &__information{
+        display: flex;   
+        flex-direction: column;
+        padding-left: 0;
+    }
+    
+    &__column{
+        display: flex;   
+        flex-direction: column;
+        width: 288px;
+        padding-left: 0;
+    }
+
+    &__labels-text{
+        font-size: 12px;
+        line-height: 18px;
+        font-family: "AvenirNextRegular";
+        color: $silver;
+        width: 276px;
+        margin-bottom: 16px;
+
+        &--last {
+            width: 252px;
+        }
+    }
+
+    &__address {
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 500;
+    }
+    &__location {
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 500;
+        font-style: italic;
+    }
+
+    &__contact {
+        margin-bottom: 24px;
+        &-name {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &-role {
+            font-weight: 500;
+            font-style: italic;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    &__contactinfo {
+        margin-bottom: 24px;
+        &-phone {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            font-style: italic;
+        }
+        &-email {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            font-style: italic;
+        }
+    }
+    &__inventory{
+        padding-top: 24px;
+        background-color: $alabaster;
+    }
+    &__inventory{
+            display: flex;
+            justify-content: center;
+            padding: 24px 5vw 0 5vw;
+            background-color: $alabaster;
+            &-box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 288px;
+            }
+        }
+}
+
+@include medium {
+    .locationDetail {
+        &__upperContainer{
+            padding: 48px 3.125vw 0 3.125vw;
+        }
+
+        &__heading {
+            width: 720px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid $mercury;
+        }
+
+        &__title-box{
+            margin-bottom: 0;
+        }
+
+        &__backArrow-box{
+            margin-right: 24px;
+            padding-top: 4px;
+        }
+
+        &__backArrow{
+            height: 24px;
+        }
+
+        &__title {
+            font-size: 36px;
+            line-height: 36px;
+            font-family: "AvenirNextBold";
+            margin-bottom: 0;
+        }
+
+        &__information{
+            display: flex;   
+            flex-direction: row;
+            padding-left: 0;
+            width: 720px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+
+        &__column{
+            display: flex;   
+            flex-direction: column;
+            width: 360px;
+            padding-left: 0;
+        }
+
+        &__labels-text{
+            font-size: 12px;
+            line-height: 18px;
+            font-family: "AvenirNextRegular";
+            color: $silver;
+            width: 276px;
+            margin-bottom: 16px;
+
+            &--last {
+                width: 252px;
+            }
+        }
+
+        &__address-box{
+            height: 44px;
+            margin-bottom: 12px;
+        }
+        &__location-box{
+            height: 44px;
+        }
+
+        &__address {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 22px; 
+        }
+
+        &__location {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 22px; 
+        }
+
+        &__contact {
+            margin-bottom: 12px;
+            width: 248px;
+            &-name {
+                font-size: 14px;
+                line-height: 22px; 
+            }
+            &-role {
+                font-size: 14px;
+                line-height: 22px; 
+            }
+        }
+        &__contactinfo {
+            margin-bottom: 0;
+            width: 248px;
+            &-phone {
+                font-size: 14px;
+                line-height: 22px; 
+            }
+            &-email {
+                font-size: 14px;
+                line-height: 22px; 
+            }
+        }
+        &__inventory{
+            padding: 1px 3.125vw 0 3.125vw;
+            &-box {
+                width: 720px;
+            }
+        }
+    }
+}
+
+@include huge {
+    .locationDetail {
+        &__upperContainer{
+            display: flex;
+        }
+
+        &__heading {
+            width: 1080px;
+        }
+        
+        &__title-box{
+            margin-bottom: 0;
+        }
+
+        &__backArrow-box{
+            margin-right: 24px;
+            padding-top: 4px;
+        }
+
+        &__backArrow{
+            height: 24px;
+        }
+
+        &__title{
+            font-family: "AvenirNextBold";
+            font-size: 36px;
+            line-height: 44px;
+        }
+
+        &__information{
+            display: flex;   
+            flex-direction: row;
+            padding-left: 0;
+            width: 1080px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+
+        &__column{
+            display: flex;   
+            flex-direction: column;
+            width: 540px;
+            padding-left: 0;
+        }
+
+        &__address {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+        }
+
+        &__contact {
+            width: 276px;
+            &-name {
+                font-size: 14px;
+                line-height: 22px; 
+            }
+            &-role {
+                font-size: 14px;
+                line-height: 22px; 
+            }
+        }
+        &__contactinfo {
+            margin-bottom: 0;
+            width: 276px;
+            &-phone {
+                font-size: 14px;
+                line-height: 22px; 
+            }
+            &-email {
+                font-size: 14px;
+                line-height: 22px; 
+            }
+        }
+   
+        
+        &__inventory{
+            padding: 1px 3.125vw 0 3.125vw;
+            &-box {
+                width: 1080px;
+            }
+        }
+    }
+}
