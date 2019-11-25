@@ -1,7 +1,5 @@
 import React from 'react'
 import Location from '../tables/Location'
-import Add from '../buttons/Add'
-
 import search from '../../assets/icons/search.svg'
 
 
@@ -26,7 +24,7 @@ export default function Locations(props) {
                 </div>
             </div>
             {locationTable}
-            <Add />
+            {/* <Add /> */}
         </div>
     )
 }

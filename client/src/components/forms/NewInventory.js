@@ -2,12 +2,15 @@ import React, { Component } from 'react'
 // import axios from 'axios';
 import Switch from '../buttons/switch';
 import Select from '../buttons/select';
-
+import locationlist from "../testData/locationData"
 
 export default class NewInventory extends Component { 
-
+state = {
+    warehouseId: undefined
+}
  newFormInfo = (event) => {  
     event.preventDefault()
+    console.log(this.state.warehouseId)
     console.log(event.target.itemName.value)
     console.log(event.target.orderedDate.value)
     console.log(event.target.city.value)
@@ -15,8 +18,23 @@ export default class NewInventory extends Component {
     console.log(event.target.itemDescription.value)
     ;
  }
+    onSelected = (option) => {
+        const value = option.value;
+    
 
+        const warehouse = locationlist.filter(location => {
+            return location.id === value 
+        })
+        this.city.value = warehouse[0].location
+        this.setState({
+            warehouseId:value
+        })
+    }
     render() {
+        console.log(locationlist)
+        const options = locationlist.map(location => {
+            return {value: location.id, label: location.name}
+        })
         return (
             <>
                 <h1 className="inventory__header">Create New</h1>
@@ -36,11 +54,11 @@ export default class NewInventory extends Component {
                     <div className="inventory__row-two">
                         <div className="box">
                             <h6 className="inventory__label">CITY</h6>
-                            <input className="inventory__box" type="text" name="city" placeholder="City"/>
+                            <input  ref = {ref => (this.city = ref)}className="inventory__box" type="text" name="city" placeholder="City"/>
                         </div>
                         <div className="box">
-                            <h6 className="inventory__label">COUNTRY</h6>
-                            <Select />
+                            <h6 className="inventory__label">WAREHOUSE</h6>
+                            <Select onSelected = {this.onSelected} options = {options}/>
                         </div>
                     </div>
 

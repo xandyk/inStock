@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Navbar from './components/navbar/Navbar';
 import Inventory from './components/navbar/Inventory';
-import Locations from './components/navbar/Locations';
+// import Locations from './components/navbar/Locations';
 import { BrowserRouter, Route } from 'react-router-dom';
 import NewInventory from './components/forms/NewInventory';
-
-import locationList from './components/testData/locationData';
+import axios from 'axios'
+// import locationList from './components/testData/locationData';
 import productList from './components/testData/productData';
-import Location from './components/tables/Location';
+// import Location from './components/tables/Location';
 
 export default function App() {
+ 
   return (
     <div>
       <BrowserRouter>
