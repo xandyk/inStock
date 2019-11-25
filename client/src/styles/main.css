@@ -155,8 +155,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 32px;
-  margin-bottom: 32px;
 }
 
 .product__mid-container {
@@ -250,6 +248,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin-top: 32px;
     margin-bottom: 0;
   }
   .product__mid-container {
@@ -869,7 +868,7 @@
   }
 }
 
-.locationDetail {
+.locationDetail__upperContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -950,6 +949,17 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-left: 0;
+}
+
+.locationDetail__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 288px;
   padding-left: 0;
 }
@@ -977,51 +987,7 @@
   font-size: 12px;
   line-height: 12px;
   font-weight: 500;
-}
-
-.locationDetail__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding-top: 32px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #e1e1e1;
-  width: 288px;
-}
-
-.locationDetail__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 234px;
-  font-size: 12px;
-  line-height: 18px;
-  font-family: "AvenirNextRegular";
-}
-
-.locationDetail__warehouse {
-  margin-bottom: 24px;
-}
-
-.locationDetail__name {
-  font-family: "AvenirNextMedium";
-  font-size: 14px;
-  line-height: 14px;
-  margin-bottom: 12px;
-}
-
-.locationDetail__address {
-  font-size: 12px;
-  line-height: 12px;
-  font-weight: 500;
+  font-style: italic;
 }
 
 .locationDetail__contact {
@@ -1049,24 +1015,48 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
+  font-style: italic;
 }
 
 .locationDetail__contactinfo-email {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
+  font-style: italic;
+}
+
+.locationDetail__inventory {
+  padding-top: 24px;
+  background-color: #FAFAFA;
 }
 
 .locationDetail__inventory {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 24px 5vw 0 5vw;
   background-color: #FAFAFA;
 }
 
+.locationDetail__inventory-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 288px;
+}
+
 @media only screen and (min-width: 768px) {
-  .locationDetail {
+  .locationDetail__upperContainer {
     padding: 48px 3.125vw 0 3.125vw;
   }
   .locationDetail__heading {
@@ -1090,7 +1080,7 @@
     font-family: "AvenirNextBold";
     margin-bottom: 0;
   }
-  .locationDetail__row {
+  .locationDetail__information {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1098,12 +1088,12 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-top: 32px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid #e1e1e1;
+    padding-left: 0;
     width: 720px;
+    margin-top: 32px;
+    margin-bottom: 32px;
   }
-  .locationDetail__content {
+  .locationDetail__column {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1111,38 +1101,39 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 704px;
+    width: 360px;
+    padding-left: 0;
+  }
+  .locationDetail__labels-text {
     font-size: 12px;
     line-height: 18px;
     font-family: "AvenirNextRegular";
+    color: #AFAFAF;
+    width: 276px;
+    margin-bottom: 16px;
   }
-  .locationDetail__warehouse {
-    margin-bottom: 32px;
+  .locationDetail__labels-text--last {
+    width: 252px;
   }
-  .locationDetail__name {
-    font-family: "AvenirNextMedium";
-    font-size: 14px;
-    line-height: 14px;
+  .locationDetail__address-box {
+    height: 44px;
     margin-bottom: 12px;
-    font-size: 15.9px;
-    line-height: 24px;
+  }
+  .locationDetail__location-box {
+    height: 44px;
   }
   .locationDetail__address {
     font-weight: 500;
     font-size: 14px;
-    line-height: 14px;
+    line-height: 22px;
   }
-  .locationDetail__subcontainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+  .locationDetail__location {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
   }
   .locationDetail__contact {
-    margin-bottom: 0;
+    margin-bottom: 12px;
     width: 248px;
   }
   .locationDetail__contact-name {
@@ -1165,61 +1156,39 @@
     font-size: 14px;
     line-height: 22px;
   }
-  .locationDetail__categories {
-    width: 208px;
+  .locationDetail__inventory {
+    padding: 1px 3.125vw 0 3.125vw;
   }
-  .locationDetail__categories-text {
-    font-size: 14px;
-    line-height: 22px;
-  }
-  .locationDetail__line-clamp {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  .locationDetail__image-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    width: 54px;
+  .locationDetail__inventory-box {
+    width: 720px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
-  .locationDetail {
+  .locationDetail__upperContainer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
   .locationDetail__heading {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     width: 1080px;
+  }
+  .locationDetail__title-box {
+    margin-bottom: 0;
+  }
+  .locationDetail__backArrow-box {
+    margin-right: 24px;
+    padding-top: 4px;
+  }
+  .locationDetail__backArrow {
+    height: 24px;
   }
   .locationDetail__title {
     font-family: "AvenirNextBold";
     font-size: 36px;
     line-height: 44px;
   }
-  .locationDetail__row {
+  .locationDetail__information {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1227,52 +1196,28 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-top: 32px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid #e1e1e1;
+    padding-left: 0;
     width: 1080px;
+    margin-top: 32px;
+    margin-bottom: 32px;
   }
-  .locationDetail__content {
+  .locationDetail__column {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 1064px;
-    padding-left: 8px;
-    font-size: 12px;
-    line-height: 18px;
-    font-family: "AvenirNextRegular";
-  }
-  .locationDetail__warehouse {
-    width: 276px;
-    padding-right: 24px;
-    margin-bottom: 0;
-  }
-  .locationDetail__name {
-    font-family: "AvenirNextMedium";
-    margin-bottom: 0;
-    font-size: 16px;
-    line-height: 24px;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 540px;
+    padding-left: 0;
   }
   .locationDetail__address {
     font-weight: 500;
     font-size: 14px;
     line-height: 14px;
   }
-  .locationDetail__subcontainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
   .locationDetail__contact {
-    margin-bottom: 0;
     width: 276px;
   }
   .locationDetail__contact-name {
@@ -1295,31 +1240,11 @@
     font-size: 14px;
     line-height: 22px;
   }
-  .locationDetail__categories {
-    width: 216px;
+  .locationDetail__inventory {
+    padding: 1px 3.125vw 0 3.125vw;
   }
-  .locationDetail__categories-text {
-    font-size: 14px;
-    line-height: 22px;
-  }
-  .locationDetail__line-clamp {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  .locationDetail__image-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 16px;
-    padding-right: 24px;
+  .locationDetail__inventory-box {
+    width: 1080px;
   }
 }
 

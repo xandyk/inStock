@@ -5,6 +5,7 @@ import Locations from './components/navbar/Locations';
 import LocationDetail from './components/tables/LocationDetail';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NewInventory from './components/forms/NewInventory';
+import NewLocation from './components/forms/NewLocation';
 import axios from 'axios'
 import locationList from './components/testData/locationData';
 import productList from './components/testData/productData';
@@ -16,7 +17,6 @@ export default function App() {
       <BrowserRouter>
         <div className="App">
           <Navbar />
-          <Route path="/inventory" exact component={Inventory} />
           <Route path="/inventory/new" exact component={NewInventory} />
 
           <Route path="/locations" />
@@ -47,7 +47,15 @@ export default function App() {
             }
           />
           <Route
-            path="/locations/:id"
+            path="/locations/new" exact
+            render={props =>
+              <>
+                <NewLocation locationList={locationList} />
+              </>
+            }
+          />
+          <Route
+            path="/locations/id/:id"
             render={props =>
               <>
                 <LocationDetail {...props} locationList={locationList} />

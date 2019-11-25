@@ -30,7 +30,7 @@ export default function Location(props) {
             {/* <Link key={index} to={`/locations/${id}`}> */}
 
             <div className="location__image-box">
-                <Link to={`/locations/${id}`}>
+                <Link to={`/locations/id/${id}`}>
                     <img className="location__right-arrow" src={rightArrow} alt="right arrow"></img>
                 </Link>
             </div>

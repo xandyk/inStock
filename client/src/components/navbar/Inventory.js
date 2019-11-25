@@ -1,5 +1,8 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+import Add from '../buttons/add'
 import Product from "../table/product";
+
 export default function Inventory(props) {
   const productTable =  props.productList && props.productList.map((product, index) => {
     return <Product key={index} productData={product} />;
@@ -31,6 +34,9 @@ export default function Inventory(props) {
         </div>
       </div>
       {productTable}
+      <Link to="/inventory/new">
+        <Add />
+      </Link>
     // </div>
   );
 }

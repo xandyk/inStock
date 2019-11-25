@@ -1,5 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Location from '../tables/Location'
+import Add from '../buttons/add'
 import search from '../../assets/icons/search.svg'
 
 
@@ -29,7 +31,9 @@ export default function Locations(props) {
                 <h5 className="location__labels-text location__labels-text--last">CATEGORIES</h5>
             </div>
             {locationTable}
-            {/* <Add /> */}
+            <Link to="/locations/new">
+                <Add />
+            </Link>
         </div>
     )
 }
