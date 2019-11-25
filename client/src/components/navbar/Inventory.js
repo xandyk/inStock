@@ -1,5 +1,5 @@
 import React from "react";
-import Product from "../table/product";
+import Product from "../table/Product";
 
 export default function Inventory(props) {
   const productTable = props.productList.map((product, index) => {

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Product from './components/table/product';
+import Product from './components/table/Product';
 import Inventory from "./components/navbar/Inventory";
 import './styles/main.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
