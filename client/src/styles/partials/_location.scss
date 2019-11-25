@@ -11,7 +11,6 @@
     &__heading {
             display: flex;
             flex-direction: column;
-            align-items: baseline;
             justify-content: space-between;
             width: 288px;
         }
@@ -60,6 +59,10 @@
         }
 
     }
+
+    &__labels{
+            display: none;   
+        }
 
     &__row{
         display: flex;
@@ -151,25 +154,60 @@
         &__heading {
             display: flex;
             flex-direction: row;
-            align-items: baseline;
             justify-content: space-between;
             width: 720px;
+            margin-bottom: 8px;
         }
 
         &__title-box{
             display: flex;
             flex-direction: row;
+            height: 48px;
         }
 
         &__title {
             display: flex;
-            // align-self: flex-start;
+            align-self: center;
             // flex-direction: row;
             // justify-self: flex-start;
-            font-size: 24px;
-            line-height: 24px;
+            font-size: 36px;
+            line-height: 36px;
             font-family: "AvenirNextBold";
             margin-bottom: 0;
+        }
+
+         &__search-container {
+            display: flex;
+            position: relative;
+        }
+
+        &__search-icon {
+            position: absolute;
+            color: $black;
+            top: 15px;
+            left: 16px;
+        }
+
+        &__search-input {
+            @include mob__h4-paragraph;
+            height: 48px;
+            width: 252px;
+            border: 1px solid $mercury;
+            border-radius: 2px;
+            background-color: $alabaster;
+            margin-bottom: 0;
+            text-indent: 40px;
+            color: $black;
+
+            &::placeholder {
+                color: $black;
+            }
+
+            &:focus {
+                border: 2px solid $black;
+                outline: none;
+            }
+
         }
 
         &__row{
@@ -197,7 +235,7 @@
             font-family: "AvenirNextMedium";
             font-size: 14px;
             line-height: 14px;
-            margin-bottom: 12px;
+            margin-bottom: 4px;
             @include desk__h3;
         }
 
@@ -257,7 +295,7 @@
     }
 }
 
-@include large {
+@include huge {
     .location {
         display: flex;
 
@@ -267,12 +305,13 @@
             align-items: baseline;
             justify-content: space-between;
             width: 1080px;
+            margin-bottom: 24px;
         }
 
         &__title{
             font-family: "AvenirNextBold";
             font-size: 36px;
-            line-height: 44px;
+            line-height: 48px;
         }
 
         &__row{
@@ -283,6 +322,25 @@
             padding-bottom: 24px;
             border-bottom: 1px solid $mercury;
             width:1080px;
+        }
+
+        &__labels{
+            display: flex;   
+            flex-direction: row;
+            width: 1080px;
+            padding-left: 8px;
+
+            &-text {
+                font-size: 12px;
+                line-height: 18px;
+                font-family: "AvenirNextRegular";
+                color: $silver;
+                width: 276px;
+
+                &--last {
+                    width: 252px;
+                }
+            }
         }
 
         &__content{
