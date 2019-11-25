@@ -9,12 +9,31 @@
     // @include mob__h5;
 
     &__heading {
-            display: flex;
-            flex-direction: column;
-            align-items: baseline;
-            justify-content: space-between;
-            width: 288px;
-        }
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        width: 288px;
+    }
+
+    &__title-box{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        margin-bottom: 32px;
+    }
+
+    &__backArrow-box{
+        display: flex;
+        height: 16px;
+        margin-right: 16px;
+        padding-top: 0;
+    }
+
+    &__backArrow{
+        display: flex;
+        height: 20px;
+    }
 
     &__title {
         display: flex;
@@ -24,42 +43,41 @@
         font-size: 24px;
         line-height: 24px;
         font-family: "AvenirNextBold";
+        margin-bottom: 0;
+    }
+
+    &__information{
+        display: flex;   
+        flex-direction: column;
+        width: 288px;
+        padding-left: 0;
+    }
+
+    &__labels-text{
+        font-size: 12px;
+        line-height: 18px;
+        font-family: "AvenirNextRegular";
+        color: $silver;
+        width: 276px;
         margin-bottom: 16px;
-    }
 
-    &__search-container {
-        display: flex;
-        position: relative;
-    }
-
-    &__search-icon {
-        position: absolute;
-        color: $black;
-        top: 15px;
-        left: 16px;
-    }
-
-    &__search-input {
-        @include mob__h4-paragraph;
-        height: 48px;
-        width: 252px;
-        border: 1px solid $mercury;
-        border-radius: 2px;
-        background-color: $alabaster;
-        margin-bottom: 8px;
-        text-indent: 40px;
-        color: $black;
-
-        &::placeholder {
-            color: $black;
+        &--last {
+            width: 252px;
         }
-
-        &:focus {
-            border: 2px solid $black;
-            outline: none;
-        }
-
     }
+
+    &__address {
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 500;
+    }
+    &__location {
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 500;
+    }
+
+  
 
     &__row{
         display: flex;
@@ -123,24 +141,10 @@
             line-height: 18px;
         }
     }
-    &__categories{
-        &-text{
-            font-weight: 500;
-        }
-    }
-    &__image-box {
+    &__inventory{
         display: flex;
-        justify-content: flex-end;
-        align-items: flex-start;
-        width: 54px;
-    }
-    &__right-arrow{
-        &:focus {
-            filter: invert(1);
-        }
-        &:hover {
-            filter: invert(1);
-        }
+        padding-top: 24px;
+        background-color: $alabaster;
     }
 }
 
@@ -149,38 +153,25 @@
         padding: 48px 3.125vw 0 3.125vw;
 
         &__heading {
-            display: flex;
-            flex-direction: row;
-            align-items: baseline;
-            justify-content: space-between;
             width: 720px;
             padding-bottom: 40px;
             border-bottom: 1px solid $mercury;
         }
 
         &__title-box{
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: space-between;
+            margin-bottom: 0;
         }
+
         &__backArrow-box{
-            display: flex;
-            height: 16px;
             margin-right: 24px;
             padding-top: 4px;
         }
 
         &__backArrow{
-            display: flex;
             height: 24px;
         }
 
         &__title {
-            display: flex;
-            // align-self: flex-start;
-            // flex-direction: row;
-            // justify-self: flex-start;
             font-size: 36px;
             line-height: 36px;
             font-family: "AvenirNextBold";

@@ -18,7 +18,6 @@ export default function LocationDetail(props) {
     return (
         <div className="locationDetail">
             <div className="locationDetail__heading">
-
                 <div className="locationDetail__title-box">
                     <div className="locationDetail__backArrow-box">
                         <img className="locationDetail__backArrow" src={backArrow} />
@@ -26,11 +25,14 @@ export default function LocationDetail(props) {
                     <h1 className="locationDetail__title">{name}</h1>
                 </div>
             </div>
-            <div className="locationDetail__labels">
+            <div className="locationDetail__information">
                 <h5 className="locationDetail__labels-text">ADDRESS</h5>
-                <h5 className="locationDetail__address">{address}</h5>
-                <h5 className="locationDetail__location">{location}</h5>
-
+                <div className="locationDetail__contact">
+                    <h5 className="locationDetail__address">{address}</h5>
+                </div>
+                <div className="locationDetail__contactinfo">
+                    <h5 className="locationDetail__location">{location}</h5>
+                </div>
 
                 <h5 className="locationDetail__labels-text">CONTACT</h5>
                 <div className="locationDetail__contact">
@@ -41,13 +43,10 @@ export default function LocationDetail(props) {
                     <h5 className="locationDetail__contactinfo-phone">{contact.phone}</h5>
                     <h5 className="locationDetail__contactinfo-email">{contact.email}</h5>
                 </div>
-
-
-
-                <h5 className="locationDetail__labels-text">CONTACT INFORMATION</h5>
-                <h5 className="locationDetail__labels-text locationDetail__labels-text--last">CATEGORIES</h5>
             </div>
-            {productTable}
+            <div className="locationDetail__inventory">
+                {productTable}
+            </div>
             {/* <Add /> */}
         </div>
     )
