@@ -4,12 +4,10 @@ import Inventory from './components/navbar/Inventory';
 import Locations from './components/navbar/Locations';
 import LocationDetail from './components/tables/LocationDetail';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-// import Locations from './components/navbar/Locations';
 import NewInventory from './components/forms/NewInventory';
 import axios from 'axios'
-// import locationList from './components/testData/locationData';
+import locationList from './components/testData/locationData';
 import productList from './components/testData/productData';
-// import Location from './components/tables/Location';
 
 export default function App() {
 
