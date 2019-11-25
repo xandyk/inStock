@@ -3,13 +3,22 @@ import React, { Component } from 'react'
 import Switch from '../buttons/switch';
 import Select from '../buttons/select';
 import locationlist from "../testData/locationData"
-
+import axios from 'axios'
 export default class NewInventory extends Component { 
 state = {
     warehouseId: undefined
 }
  newFormInfo = (event) => {  
     event.preventDefault()
+    axios.post('http://localhost:5000/inventory', {
+        id: this.state.warehouseId,
+        item: event.target.itemName.value,
+        date: event.target.orderedDate.value,
+        city: event.target.city.value,
+        quantity: event.target.quantity.value,
+        description: event.target.itemDescription.value
+    })
+    
     console.log(this.state.warehouseId)
     console.log(event.target.itemName.value)
     console.log(event.target.orderedDate.value)
@@ -20,7 +29,6 @@ state = {
  }
     onSelected = (option) => {
         const value = option.value;
-    
 
         const warehouse = locationlist.filter(location => {
             return location.id === value 

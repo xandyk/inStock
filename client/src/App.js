@@ -16,28 +16,15 @@ export default function App() {
       <BrowserRouter>
         <div className="App">
           <Navbar />
-          <Route path="/inventory" exact component={Inventory} />
-          <Route path="/inventory/new" exact component={NewInventory} />
-
-          <Route path="/locations"/>
-          {/* <Route path="/NewInventory" component={NewInventory} /> */}
-          <Route
-            path="/inventory"
+          <Route exact path="/inventory"
             render={props =>
               <>
                 <Inventory productList={productList} />
               </>
             }
           />
-          {/* <Route path="/locations" component={Locations} /> */}
-          {/* <Route
-            path="/locations"
-            render={props =>
-              <>
-                <Locations locationList={locationList} />
-              </>
-            }
-          /> */}
+          <Route path="/locations"/>
+          <Route path="/inventory/new" exact component={NewInventory} />
         </div>
       </BrowserRouter>
     </div>
