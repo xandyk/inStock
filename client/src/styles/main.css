@@ -941,6 +941,11 @@
           justify-content: center;
 }
 
+.summary__name-button--OOS {
+  background-color: #e1e1e1;
+  color: #323232;
+}
+
 .summary__desc-container {
   margin-bottom: 32px;
   -webkit-box-orient: vertical;

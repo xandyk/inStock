@@ -1,7 +1,13 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import Arrow from "../../assets/icons/back-arrow.svg";
 
 export default function Summary(props) {
+  const productData = props.productList.find((product) => {
+    return (props.match.params.id === product.id
+    )
+  })
+
   const {
     name,
     status,
@@ -13,15 +19,24 @@ export default function Summary(props) {
     location,
     quantity,
     categories
-  } = props.productData;
+  } = productData;
+
+  let statusStyling = ''
+  if (status === 'In Stock') {
+    statusStyling = 'summary__name-button'
+  } else {
+    statusStyling = 'summary__name-button summary__name-button--OOS'
+  }
   return (
     <div className="summary">
       <div className="summary__name-container">
         <div className="summary__name-container__top">
-          <img className="summary__name-img" src={Arrow}></img>
+          <Link className='summary__name-img' to='/inventory' >
+            <img className="summary__name-img" src={Arrow}></img>
+          </Link>
           <h1 className="summary__name-label">{name}</h1>
         </div>
-        <h3 className="summary__name-button">{status}</h3>
+        <h3 className={`${statusStyling}`}>{status}</h3>
       </div>
       <div className="summary__huge-container">
         <div className="summary__desc-container">
@@ -55,7 +70,7 @@ export default function Summary(props) {
           </div>
           <div className="summary__data-container">
             <h5 className="summary__label">CATEGORIES</h5>
-            <h4 className="summary__data">{categories}</h4>
+            <h4 className="summary__data">{categories.join(', ')}</h4>
           </div>
         </div>
       </div>
