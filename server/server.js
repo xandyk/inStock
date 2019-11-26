@@ -12,8 +12,8 @@ const helper = require("./helper/helper");
 
 app.use(cors())
 app.use(express.json())
-app.get('/', (req,resp)=>{
-    res.sendFile(__dirname + '/index.html');}
+// app.get('/', (req,resp)=>{
+//     res.sendFile(__dirname + '/index.html');}
 
 app.get('/inventory', (req, res) => {
     // res.sendFile(__dirname + '/index.html');
