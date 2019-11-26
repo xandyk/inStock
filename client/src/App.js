@@ -25,6 +25,11 @@ export default class App extends Component {
         productList: response.data
       })
     })
+    axios.get(`${url}/locations`).then(response => {
+      this.setState({
+        locationList: response.data
+      })
+    })
   }
   // , () => console.log(this.state.productList)
   updateProductList = (newProduct) => {
