@@ -4,7 +4,7 @@ import Add from '../buttons/add'
 import Product from "../table/product";
 
 export default function Inventory(props) {
-  const productTable =  props.productList && props.productList.map((product, index) => {
+  const productTable = props.productList && props.productList.map((product, index) => {
     return <Product key={index} productData={product} />;
   });
   return (
@@ -37,6 +37,6 @@ export default function Inventory(props) {
       <Link to="/inventory/new">
         <Add />
       </Link>
-    // </div>
+    </div>
   );
 }
