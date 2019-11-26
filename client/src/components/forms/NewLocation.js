@@ -1,23 +1,42 @@
 import React, { Component } from 'react'
-// import axios from 'axios';
+import axios from 'axios';
 
 
 export default class NewLocation extends Component {
+    newFormInfo = (event) => {
+        event.preventDefault()
+        axios.post('http://localhost:5000/locations', {
+            name: event.target.name.value,
+            address: event.target.address.value,
+            location: event.target.countries.value,
+            contact: {name: event.target.contactname.value,
+            phone: event.target.phone.value,
+            position: event.target.position.value,
+            email: event.target.email.value
+            },
+            categories: event.target.categories.value.split(',')
+        }).then(response => {
+            this.props.updateLocationList(response.data);
+        })
+        console.log(event.target.name.value);
+        event.target.reset();
+
+    }
     render() {
         return(
             <>
                 <h1 className="form__header">Add New</h1>
 
-                <form className="form__container">
+                <form onSubmit={event => this.newFormInfo(event)} className="form__container">
                     <div className="form__row-one">
                         <h4 className="form__label">WHAREHOUSE</h4>
-                        <input className="form__box" type="text" name="name-id" placeholder="Name and ID"/>
+                        <input className="form__box" type="text" name="name" placeholder="Name and ID"/>
                     </div>
 
                     <div className="form__row-two">
                         <div className="box">
                             <h4 className="form__label">ADDRESS</h4>
-                            <input className="form__box" type="text" name="enter-address" placeholder="Enter Address"/>
+                            <input className="form__box" type="text" name="address" placeholder="Enter Address"/>
                         </div>
 
                         <div className="box">
@@ -32,7 +51,7 @@ export default class NewLocation extends Component {
                     <div className="form__row-three">
                         <div className="box">
                             <h4 className="form__label">CONTACT NAME</h4>
-                            <input className="form__box" type="text" name="name" placeholder="Enter Name"/>
+                            <input className="form__box" type="text" name="contactname" placeholder="Enter Name"/>
                         </div>
                         <div className="box">
                             <h4 className="form__label">POSITION</h4>
@@ -43,7 +62,7 @@ export default class NewLocation extends Component {
                     <div className="form__row-four">
                         <div className="box">
                             <h4 className="form__label">PHONE NUMBER</h4>
-                            <input className="form__box"type="text" name="quantity" placeholder="(000)- 000- 000"/>
+                            <input className="form__box"type="text" name="phone" placeholder="(000)- 000- 000"/>
                         </div>
                         
                         <div className="box">
@@ -58,12 +77,11 @@ export default class NewLocation extends Component {
                             <input type="text" name="categories" placeholder="Use commas to separate each category"/>
                         </div>
                     </div>
-                </form>
-
                 <div className="btn-container">
                     <button className="btn-cancel">CANCEL</button>
                     <button className="btn-save">SAVE</button>
                 </div>
+                </form>
             </>
         );
     }
