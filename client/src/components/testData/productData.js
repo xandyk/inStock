@@ -3,7 +3,7 @@ export default
         {
             "id": "cd56e64c-119b-46ce-b88b-55308726a57d",
             "refNumber": "JK2020FD7811201",
-            "name": "iPad Pro 12.9\"",
+            "name": "iPad Pro 12.9",
             "location": "Toronto, ON",
             "descriptionBrief": "Premium high performance tablet",
             "descriptionDetail": "The largest tablet in the iPad line, perfect for anyone who wants to \"Go big or go home\".",
