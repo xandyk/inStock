@@ -15,40 +15,26 @@ app.use(express.json())
 // app.get('/', (req,resp)=>{
 //     res.sendFile(__dirname + '/index.html');}
 
-app.get('/inventory', (req, res) => {
-    // res.sendFile(__dirname + '/index.html');
-    res.json(products.map(product => {
-        return {
-            id: product.id,
-            refNumber: product.refNumber,
-            name: product.name,
-            descriptionBrief: product.descriptionBrief,
-            descriptionDetail: product.descriptionDetail,
-            orderedBy: product.orderedBy,
-            dateOrdered: product.dateOrdered,
-            quantity: product.quantity,
-            status: product.status,
-            categories: product.categories
-        }
-    }))
-});
+// app.get('/inventory', (req, res) => {
+//     // res.sendFile(__dirname + '/index.html');
+//     res.json(products.map(product => {
+//         return {
+//             id: product.id,
+//             refNumber: product.refNumber,
+//             name: product.name,
+//             descriptionBrief: product.descriptionBrief,
+//             descriptionDetail: product.descriptionDetail,
+//             orderedBy: product.orderedBy,
+//             dateOrdered: product.dateOrdered,
+//             quantity: product.quantity,
+//             status: product.status,
+//             categories: product.categories
+//         }
+//     }))
+// });
 
 
 app.use('/inventory', require('./routes/api/inventory'));
-
-//  Get product with :id
-// app.get("/inventory/id/:id", (req, res) => {
-//     // res.send(req.params.id);
-//     const found = products.some(product => product.id === req.params.id);
-//     if (found) {
-//         // res.json(Object(videos.filter(video => video.id === req.params.id)));
-//         res.json(products.find(product => product.id === req.params.id));
-//     } else {
-//         res
-//             .status(400)
-//             .json({ errorMessage: `Product with ID:${req.params.id} not found` });
-//     }
-// });
 
 app.get('/locations', (req, res) => {
     // res.sendFile(__dirname + '/index.html');
