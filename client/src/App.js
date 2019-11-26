@@ -17,6 +17,7 @@ export default function App() {
       <BrowserRouter>
         <div className="App">
           <Navbar />
+
           <Route path="/inventory/new" exact component={NewInventory} />
 
           <Route path="/locations" />

@@ -1,4 +1,6 @@
 const express = require('express');
+const cors = require('cors');
+
 const app = express();
 const router = express.Router();
 const fileName = __dirname + '/model/locations.json'
@@ -7,7 +9,11 @@ const fileNameTwo = __dirname + '/model/products.json'
 let products = require(fileNameTwo);
 const helper = require("./helper/helper");
 
-app.use(express.json());
+
+app.use(cors())
+app.use(express.json())
+app.get('/', (req,resp)=>{
+    res.sendFile(__dirname + '/index.html');}
 
 app.get('/inventory', (req, res) => {
     // res.sendFile(__dirname + '/index.html');
@@ -27,19 +33,22 @@ app.get('/inventory', (req, res) => {
     }))
 });
 
+
+app.use('/inventory', require('./routes/api/inventory'));
+
 //  Get product with :id
-app.get("/inventory/id/:id", (req, res) => {
-    // res.send(req.params.id);
-    const found = products.some(product => product.id === req.params.id);
-    if (found) {
-        // res.json(Object(videos.filter(video => video.id === req.params.id)));
-        res.json(products.find(product => product.id === req.params.id));
-    } else {
-        res
-            .status(400)
-            .json({ errorMessage: `Product with ID:${req.params.id} not found` });
-    }
-});
+// app.get("/inventory/id/:id", (req, res) => {
+//     // res.send(req.params.id);
+//     const found = products.some(product => product.id === req.params.id);
+//     if (found) {
+//         // res.json(Object(videos.filter(video => video.id === req.params.id)));
+//         res.json(products.find(product => product.id === req.params.id));
+//     } else {
+//         res
+//             .status(400)
+//             .json({ errorMessage: `Product with ID:${req.params.id} not found` });
+//     }
+// });
 
 app.get('/locations', (req, res) => {
     // res.sendFile(__dirname + '/index.html');
