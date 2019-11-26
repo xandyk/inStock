@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./components/navbar/Navbar";
 import Inventory from "./components/navbar/Inventory";
+import Summary from "./components/table/Summary";
 import Locations from "./components/navbar/Locations";
 import LocationDetail from "./components/tables/LocationDetail";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -38,6 +39,14 @@ export default function App() {
               </>
             )}
           />
+          <Route
+            path="/Inventory/id/:id"
+            render={props => (
+              <>
+                <Summary {...props} productList={productList} />
+              </>
+            )}
+            />
           {/* <Route path="/locations" component={Locations} /> */}
           <Route
             path="/locations"
