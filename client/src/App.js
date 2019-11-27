@@ -39,7 +39,12 @@ export default class App extends Component {
     })
   }
   // ,() => console.log(this.state.productList)
-
+  updateLocationList = (newLocation) => {
+    console.log('running reload locations')
+    this.setState({
+      locationList: [...this.state.locationList, newLocation]
+    })
+  }
   render() {
     return (
       <div>
@@ -98,7 +103,7 @@ export default class App extends Component {
               exact
               render={props => (
                 <>
-                  <NewLocation locationList={this.state.locationList} />
+                  <NewLocation {...props} updateLocationList={this.updateLocationList} />
                 </>
               )}
             />

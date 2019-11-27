@@ -35,7 +35,7 @@ app.use(express.json())
 
 
 app.use('/inventory', require('./routes/api/inventory'));
-
+app.use('/locations', require('./routes/api/locations'));
 app.get('/locations', (req, res) => {
     // res.sendFile(__dirname + '/index.html');
     res.json(locations.map(location => {
