@@ -1,0 +1,422 @@
+.location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 5vw 0 5vw;
+    // width: 288px;
+    // flex-direction: row;
+    // justify-content: center;
+    // @include mob__h5;
+
+    &__heading {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 288px;
+        }
+
+    &__title {
+        display: flex;
+        align-self: flex-start;
+        // flex-direction: row;
+        // justify-self: flex-start;
+        font-size: 24px;
+        line-height: 24px;
+        font-family: "AvenirNextBold";
+        margin-bottom: 16px;
+    }
+
+    &__search-container {
+        display: flex;
+        position: relative;
+    }
+
+    &__search-icon {
+        position: absolute;
+        color: $black;
+        top: 15px;
+        left: 16px;
+    }
+
+    &__search-input {
+        @include mob__h4-paragraph;
+        height: 48px;
+        width: 252px;
+        border: 1px solid $mercury;
+        border-radius: 2px;
+        background-color: $alabaster;
+        margin-bottom: 8px;
+        text-indent: 40px;
+        color: $black;
+
+        &::placeholder {
+            color: $black;
+        }
+
+        &:focus {
+            border: 2px solid $black;
+            outline: none;
+        }
+
+    }
+
+    &__labels{
+            display: none;   
+        }
+
+    &__row{
+        display: flex;
+        flex-direction: row;
+        // align-items: center;
+        padding-top: 32px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid $mercury;
+        
+        width:288px;
+        
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        width: 234px;
+        @include mob__h5;
+    }
+
+    &__warehouse {
+        margin-bottom: 24px;
+    }
+
+    &__name {
+        font-family: "AvenirNextMedium";
+        font-size: 14px;
+        line-height: 14px;
+        margin-bottom: 12px;
+    }
+
+    &__address {
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 500;
+    }
+    &__contact {
+        margin-bottom: 24px;
+        &-name {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &-role {
+            font-weight: 500;
+            font-style: italic;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    &__contactinfo {
+        margin-bottom: 24px;
+        &-phone {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &-email {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    &__categories{
+        &-text{
+            font-weight: 500;
+        }
+    }
+    &__image-box {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: 54px;
+    }
+    &__right-arrow{
+        &:focus {
+            filter: invert(1);
+        }
+        &:hover {
+            filter: invert(1);
+        }
+    }
+}
+
+@include medium {
+    .location {
+        padding: 48px 3.125vw 0 3.125vw;
+
+        &__heading {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 720px;
+            margin-bottom: 8px;
+        }
+
+        &__title-box{
+            display: flex;
+            flex-direction: row;
+            height: 48px;
+        }
+
+        &__title {
+            display: flex;
+            align-self: center;
+            // flex-direction: row;
+            // justify-self: flex-start;
+            font-size: 36px;
+            line-height: 36px;
+            font-family: "AvenirNextBold";
+            margin-bottom: 0;
+        }
+
+         &__search-container {
+            display: flex;
+            position: relative;
+        }
+
+        &__search-icon {
+            position: absolute;
+            color: $black;
+            top: 15px;
+            left: 16px;
+        }
+
+        &__search-input {
+            @include mob__h4-paragraph;
+            height: 48px;
+            width: 252px;
+            border: 1px solid $mercury;
+            border-radius: 2px;
+            background-color: $alabaster;
+            margin-bottom: 0;
+            text-indent: 40px;
+            color: $black;
+
+            &::placeholder {
+                color: $black;
+            }
+
+            &:focus {
+                border: 2px solid $black;
+                outline: none;
+            }
+
+        }
+
+        &__row{
+            display: flex;
+            flex-direction: row;
+            // align-items: center;
+            padding-top: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid $mercury;
+            width:720px;
+        }
+
+        &__content{
+            display: flex;
+            flex-direction: column;
+            width: 704px;
+            @include mob__h5;
+        }
+
+        &__warehouse {
+            margin-bottom: 32px;
+        }
+
+        &__name {
+            font-family: "AvenirNextMedium";
+            font-size: 14px;
+            line-height: 14px;
+            margin-bottom: 4px;
+            @include desk__h3;
+        }
+
+        &__address {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+        }
+
+        &__subcontainer {
+            display: flex;
+            flex-direction: row;
+        }
+        &__contact {
+            margin-bottom: 0;
+            width: 248px;
+            &-name {
+                font-size: 14px;
+                line-height: 22px; 
+            }
+            &-role {
+                font-size: 14px;
+                line-height: 22px; 
+            }
+        }
+        &__contactinfo {
+            margin-bottom: 0;
+            width: 248px;
+            &-phone {
+                font-size: 14px;
+                line-height: 22px; 
+            }
+            &-email {
+                font-size: 14px;
+                line-height: 22px; 
+            }
+        }
+        &__categories{
+            width: 208px;
+            &-text{
+                font-size: 14px;
+                line-height: 22px; 
+            }
+        }
+        &__line-clamp {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden; 
+        }
+        &__image-box {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            width: 54px;
+        }
+    }
+}
+
+@include huge {
+    .location {
+        display: flex;
+
+        &__heading {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+            width: 1080px;
+            margin-bottom: 24px;
+        }
+
+        &__title{
+            font-family: "AvenirNextBold";
+            font-size: 36px;
+            line-height: 48px;
+        }
+
+        &__row{
+            display: flex;
+            flex-direction: row;
+            // align-items: center;
+            padding-top: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid $mercury;
+            width:1080px;
+        }
+
+        &__labels{
+            display: flex;   
+            flex-direction: row;
+            width: 1080px;
+            padding-left: 8px;
+
+            &-text {
+                font-size: 12px;
+                line-height: 18px;
+                font-family: "AvenirNextRegular";
+                color: $silver;
+                width: 276px;
+
+                &--last {
+                    width: 252px;
+                }
+            }
+        }
+
+        &__content{
+            display: flex;
+            flex-direction: row;
+            width: 1064px;
+            padding-left: 8px;
+            @include mob__h5;
+        }
+
+        &__warehouse {
+            width: 276px;
+            padding-right: 24px;
+            margin-bottom: 0;
+        }
+
+        &__name {
+            font-family: "AvenirNextMedium";
+            margin-bottom: 0;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        &__address {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+        }
+
+        &__subcontainer {
+            display: flex;
+            flex-direction: row;
+        }
+        &__contact {
+            margin-bottom: 0;
+            width: 276px;
+            &-name {
+                font-size: 14px;
+                line-height: 22px; 
+            }
+            &-role {
+                font-size: 14px;
+                line-height: 22px; 
+            }
+        }
+        &__contactinfo {
+            margin-bottom: 0;
+            width: 276px;
+            &-phone {
+                font-size: 14px;
+                line-height: 22px; 
+            }
+            &-email {
+                font-size: 14px;
+                line-height: 22px; 
+            }
+        }
+        &__categories{
+            width: 216px;
+            &-text{
+                font-size: 14px;
+                line-height: 22px; 
+            }
+        }
+        &__line-clamp {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden; 
+        }
+        &__image-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 16px;
+            padding-right: 24px;
+        }
+    }
+}

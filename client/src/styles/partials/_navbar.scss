@@ -1,0 +1,124 @@
+.nav {
+    position: relative;
+    background-color: $black;
+    height: 80px;
+    width: 100vw;
+
+    &__logo {
+        margin: 16px 0 0 30vw;
+    }
+
+    &__menu {
+        margin: unset;
+        padding-left: unset;
+        list-style: none;
+        display: flex;
+      
+    }
+
+    &__list-inventory {
+        width: 50%;
+        text-align: center;
+
+        &--active{
+            padding-bottom: 2.9px;
+            border-bottom: 4px solid $white;
+        }
+        &--inactive{
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+
+    &__list-locations {
+        width: 50%;
+        text-align: center;
+
+        &--active{
+            padding-bottom: 2.9px;
+            border-bottom: 4px solid $white;
+        }
+        &--inactive{
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+
+    &__list-link{
+        &--active{
+            color: $white; 
+        }
+         &--inactive{
+            color: $silver;
+        }
+    }
+}
+
+/* ----- Media Queries: Tablet ----- */
+
+@include medium  {
+
+.nav {
+    height: 80px;
+    display: flex;
+    flex-direction: flow;
+    align-items: center;
+
+    &__logo{
+        margin-top: unset;
+        margin-left: 3.125vw;
+        margin-right: 56px;
+      }
+      
+      &__menu {
+          display: flex;
+          align-items: center;
+      }
+
+    
+    &__list-inventory {
+        padding: unset;
+        &--active{
+            border-bottom: 4px solid $white;
+            padding: 27.5px;
+            padding-bottom: 20px;
+        }
+        &--inactive{
+            padding: 28px;
+            padding-bottom: 24px;
+            border-bottom: none;
+        }
+    }
+
+    &__list-locations {
+        margin-left: 30px;
+        &--active{
+            border-bottom: 4px solid $white;
+            padding: 27.5px;
+            padding-bottom: 20px;
+        }
+        &--inactive{
+            padding: 28px;
+            padding-bottom: 24px;
+            border-bottom: none;
+        }
+    }
+}
+}
+
+
+@include large {
+    .nav__logo {
+        margin-left: 180px;
+    }
+}
+
+
+  
+
+
+
+      
+
+
+

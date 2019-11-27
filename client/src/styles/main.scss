@@ -1,7 +1,14 @@
 @import "./partials/breakpoints";
 @import "./partials/colors";
 @import "./partials/fonts";
-@import "./partials/header";
+@import "./partials/typography";
+@import "./partials/navbar";
+@import "./partials/product";
+@import "./partials/location";
+@import "./partials/summary";
+@import "./partials/locationDetail";
+@import "./partials/create-new";
+@import "./partials/floatingActionButton";
 
 
 html,
@@ -9,6 +16,7 @@ body {
   margin: 0;
   font-family: "Nunito", sans-serif;
   line-height: 1.8rem;
+  
   height: 100vh;
   box-sizing: border-box;
 }
@@ -19,7 +27,11 @@ body {
   box-sizing: inherit;
 }
 
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+}
 
-
-
-
+a { 
+    text-decoration: none;
+    color: inherit;
+}

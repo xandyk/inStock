@@ -1,0 +1,42 @@
+.floating {
+    &__box {
+        position: fixed;
+        bottom: 20vh;
+        right: 32px;
+    }
+    &__button {
+        height: 60px;
+        width: 60px;
+        background-color: $instock-blue;
+        border: none;
+        border-radius: 50%;
+        box-shadow: 0 30px 32px -4px $mercury;
+
+        &:hover{
+            background-color: $instock-blue-dark;
+        }
+    }
+    &__add {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@include medium { 
+    .floating{
+         &__box {
+            position: fixed;
+            bottom: 10vh;
+            right: 10vw;
+        }
+        &__button {
+            height: 80px;
+            width: 80px;
+            box-shadow: 0 40px 32px -4px $mercury;
+        }
+        &__add {
+            height: 24px;
+            width: 24px;
+        }
+    }
+}
