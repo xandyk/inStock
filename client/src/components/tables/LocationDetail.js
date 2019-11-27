@@ -22,9 +22,9 @@ export default function LocationDetail(props) {
                 <div className="locationDetail__heading">
                     <div className="locationDetail__title-box">
                         <div className="locationDetail__backArrow-box">
-                            <Link to="/locations">
+                            <button className="locationDetail__backArrow-button" onClick={() => props.history.goBack()}>
                                 <img className="locationDetail__backArrow" src={backArrow} />
-                            </Link>
+                            </button>
                         </div>
                         <h1 className="locationDetail__title">{name}</h1>
                     </div>

@@ -21,6 +21,12 @@
     margin-right: 5%;
   }
 
+  &__button {
+    background: transparent;
+    border: none !important;
+    font-size:0;
+  }
+
   &__name-label {
     @include header;
     display: flex;
