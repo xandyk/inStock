@@ -55,11 +55,12 @@ export default class App extends Component {
         <BrowserRouter>
           <div className="App">
             {/* <Navbar {...props} /> */}
-            <Navbar />
+
 
             <Route
               path="/inventory/new" exact render={props => (
                 <>
+                  <Navbar {...props} />
                   <NewInventory {...props} updateProductList={this.updateProductList} />
                 </>
               )}
@@ -72,6 +73,7 @@ export default class App extends Component {
               exact
               render={props => (
                 <>
+                  <Navbar {...props} />
                   <Inventory productList={this.state.productList} />
                 </>
               )}
@@ -81,6 +83,7 @@ export default class App extends Component {
               exact
               render={props => (
                 <>
+                  <Navbar {...props} />
                   <Inventory productList={this.state.productList} />
                 </>
               )}
@@ -89,6 +92,7 @@ export default class App extends Component {
               path="/Inventory/id/:id"
               render={props => (
                 <>
+                  <Navbar {...props} />
                   <Summary {...props} productList={this.state.productList} />
                 </>
               )}
@@ -99,6 +103,7 @@ export default class App extends Component {
               exact
               render={props => (
                 <>
+                  <Navbar {...props} />
                   <Locations locationList={this.state.locationList} />
                 </>
               )}
@@ -108,6 +113,7 @@ export default class App extends Component {
               exact
               render={props => (
                 <>
+                  <Navbar {...props} />
                   <NewLocation {...props} updateLocationList={this.updateLocationList} />
                 </>
               )}
@@ -116,6 +122,7 @@ export default class App extends Component {
               path="/locations/id/:id"
               render={props => (
                 <>
+                  <Navbar {...props} />
                   <LocationDetail {...props} locationList={this.state.locationList} />
                 </>
               )}
