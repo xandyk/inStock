@@ -104,9 +104,7 @@ export default class NewInventory extends Component {
                     </div>
                     <div className="btn-container">
                         <button type='submit' className="btn-save">SAVE</button>
-                        <Link to="/inventory">
-                            <button className="btn-cancel">CANCEL</button>
-                        </Link>
+                        <button type="button" className="btn-cancel" onClick={() => this.props.history.goBack()}>CANCEL</button>
                     </div>
                 </form>
             </>

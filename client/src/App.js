@@ -89,7 +89,7 @@ export default class App extends Component {
               path="/Inventory/id/:id"
               render={props => (
                 <>
-                  <Summary {...props} productList={this.state.productList} goBack={this.goBack()} />
+                  <Summary {...props} productList={this.state.productList} />
                 </>
               )}
             />
