@@ -45,11 +45,16 @@ export default class App extends Component {
       locationList: [...this.state.locationList, newLocation]
     })
   }
+  goBack() {
+    // this.props.history.goBack();
+  }
+
   render() {
     return (
       <div>
         <BrowserRouter>
           <div className="App">
+            {/* <Navbar {...props} /> */}
             <Navbar />
 
             <Route
@@ -84,7 +89,7 @@ export default class App extends Component {
               path="/Inventory/id/:id"
               render={props => (
                 <>
-                  <Summary {...props} productList={this.state.productList} />
+                  <Summary {...props} productList={this.state.productList} goBack={this.goBack()} />
                 </>
               )}
             />

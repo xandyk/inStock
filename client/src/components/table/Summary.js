@@ -30,10 +30,10 @@ export default function Summary(props) {
   return (
     <div className="summary">
       <div className="summary__name-container">
-        <div className="summary__name-container__top">
-          <Link className='summary__name-img' to='/inventory' >
+        <div className="summary__name-container__top" onClick={() => props.history.goBack()}>
+          <button className='summary__name-img summary__button' to='/inventory' >
             <img className="summary__name-img" src={Arrow}></img>
-          </Link>
+          </button>
           <h1 className="summary__name-label">{name}</h1>
         </div>
         <h3 className={`${statusStyling}`}>{status}</h3>

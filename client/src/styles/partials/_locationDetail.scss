@@ -33,6 +33,13 @@
         height: 20px;
     }
 
+    &__backArrow-button {
+        padding: 0;
+        background: transparent;
+        border: none !important;
+        font-size:0;
+    }
+
     &__title {
         display: flex;
         align-self: flex-start;
