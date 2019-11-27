@@ -254,6 +254,34 @@
 
 .product__button-container {
   margin-right: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+}
+
+.product__remove {
+  display: none;
+}
+
+.product__remove--reveal {
+  display: block;
+  position: absolute;
+  top: 25px;
+  width: 161px;
+  height: 44px;
+  text-align: left;
+  background-color: #FFFFFF;
+  border: 1px solid #e1e1e1;
+  border-radius: 2px;
+  font-family: 'AvenirNextRegular';
 }
 
 .product__label-tab {
@@ -362,6 +390,21 @@
         -ms-flex-direction: row;
             flex-direction: row;
     width: 58%;
+  }
+  .product__remove {
+    display: none;
+  }
+  .product__remove--reveal {
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    width: 161px;
+    height: 44px;
+    text-align: left;
+    background-color: #FFFFFF;
+    border: 1px solid #e1e1e1;
+    border-radius: 2px;
+    font-family: 'AvenirNextRegular';
   }
 }
 

@@ -133,6 +133,26 @@
 
 &__button-container{
     margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+}
+
+&__remove{
+    display: none;
+    &--reveal{
+        display: block;
+        position: absolute;
+        top: 25px;
+        width: 161px;
+        height: 44px;
+        text-align: left;
+        background-color: $white;
+        border: 1px solid $mercury;
+        border-radius: 2px;
+        font-family: 'AvenirNextRegular';
+    }
 }
 
 &__label-tab{
@@ -214,6 +234,22 @@
         flex-direction: row;
         width: 58%;
     }
+
+    &__remove{
+    display: none;
+    &--reveal{
+        display: block;
+        position: absolute;
+        bottom: -40px;
+        width: 161px;
+        height: 44px;
+        text-align: left;
+        background-color: $white;
+        border: 1px solid $mercury;
+        border-radius: 2px;
+        font-family: 'AvenirNextRegular';
+    }
+}
 }
 
 @include huge{
