@@ -8,7 +8,7 @@ export default class NewLocation extends Component {
         axios.post('http://localhost:5000/locations', {
             name: event.target.name.value,
             address: event.target.address.value,
-            location: event.target.countries.value,
+            location: event.target.countries.options[event.target.countries.selectedIndex].text,
             contact: {
                 name: event.target.contactname.value,
                 phone: event.target.phone.value,
@@ -19,7 +19,8 @@ export default class NewLocation extends Component {
         }).then(response => {
             this.props.updateLocationList(response.data);
         })
-        console.log(event.target.name.value);
+        console.log(event.target.address);
+        console.log(event.target.address.value);
         event.target.reset();
 
     }

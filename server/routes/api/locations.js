@@ -8,15 +8,15 @@ const locationList = __dirname + '/../../model/locations.json';
 const locationListData = require(locationList);
 
 router.post('/', (req, res) => {
-    const { name, address, location, contact, categories} = req.body
+    const { name, address, location, contact, categories } = req.body
     //const warehouse = locationListData.filter(location => {
-       // return id === location.id
-  //  })
+    // return id === location.id
+    //  })
 
     let newLocation = {
         id: helper.getNewId(),
         name: name,
-        adress: address,
+        address: address,
         location: location,
         contact: contact,
         categories: categories,
@@ -27,7 +27,6 @@ router.post('/', (req, res) => {
     locationListData.push(newLocation);
     helper.writeJSONFile(locationList, locationListData)
     res.status(200).json(newLocation)
-    console.log(newLocation)
 
 })
 
