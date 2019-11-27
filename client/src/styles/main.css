@@ -1731,6 +1731,7 @@
     margin-right: 5%;
   }
   .summary__large-container {
+    width: 50%;
     margin-top: 40px;
   }
 }
