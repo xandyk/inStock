@@ -18,31 +18,41 @@
 
     &__list-inventory {
         width: 50%;
-        padding-bottom: 2.9px;
         text-align: center;
-        border-bottom: 4px solid $white;
+
+        &--active{
+            padding-bottom: 2.9px;
+            border-bottom: 4px solid $white;
+        }
+        &--inactive{
+            padding-bottom: 0;
+            border-bottom: none;
+        }
     }
 
     &__list-locations {
         width: 50%;
         text-align: center;
+
+        &--active{
+            padding-bottom: 2.9px;
+            border-bottom: 4px solid $white;
+        }
+        &--inactive{
+            padding-bottom: 0;
+            border-bottom: none;
+        }
     }
 
-    &__list-inventory.active {
-        border-bottom: none;
-        text-decoration: none;
-        color: $white;
-    }
-
-    &__list-locations.inactive {
-            text-decoration: none;
+    &__list-link{
+        &--active{
+            color: $white; 
+        }
+         &--inactive{
             color: $silver;
-            width: 50%;
-            padding-bottom: 5px;
+        }
     }
 }
-
-
 
 /* ----- Media Queries: Tablet ----- */
 
@@ -65,20 +75,33 @@
           align-items: center;
       }
 
+    
     &__list-inventory {
-        border-bottom: none;
         padding: unset;
-        width: 12vw;
+        &--active{
+            border-bottom: 4px solid $white;
+            padding: 27.5px;
+            padding-bottom: 20px;
+        }
+        &--inactive{
+            padding: 28px;
+            padding-bottom: 24px;
+            border-bottom: none;
+        }
     }
 
-    &__list-inventory.active { 
-        border-bottom: 4px solid $white;
-        padding: 27.5px;
-    }
-
-    &__list-locations.inactive {
+    &__list-locations {
         margin-left: 30px;
-        padding: 28px;
+        &--active{
+            border-bottom: 4px solid $white;
+            padding: 27.5px;
+            padding-bottom: 20px;
+        }
+        &--inactive{
+            padding: 28px;
+            padding-bottom: 24px;
+            border-bottom: none;
+        }
     }
 }
 }
